@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrainSeed Networks</title>
+    <link rel="shortcut icon" href="assets/img/brand/favicon.svg" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- ===== Link Swiper's CSS =====
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/dfebc2aeb7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <% if(displayMessage.length> 0){%>
+        <div class="alert alert-<%=typeOfMsg%>" role="alert" id="disapearMeAfter2Seconds">
+            <span style="font-size: 1.1rem; font-weight: 700; padding-right: 0.5%;">
+                <%= displayMessageHeading %>:
+            </span>
+            <%= displayMessage %>
+        </div>
+        <%}%>
+
+            <!--! Navbar section **Start-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <!-- Brand here -->
+                        <img class="" style="height: 6rem; width: 9rem" src="./images/logo.png" alt="hero-img"
+                            class="mw-50" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link active" aria-current="page" href="#homePage">Home</a>
+                            <a class="nav-link" href="#About-Page">About</a>
+                            <a class="nav-link" href="#teamMembersPage">Team</a>
+                            <a class="nav-link" href="#eventPage">Events</a>
+                            <a class="nav-link" href="#blogPage">Blogs</a>
+                        </div>
+                        <a href="#contactUs" class="btn btn-outline-secondary shadow-sm d-sm d-block ms-4">Contact
+                            Us</a>
+                        <div class="dropdown ms-3">
+                            <a class="btn btn-primary dropdown-toggle joinNavBtn" href="#" role="button"
+                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Join Us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#joinTeamPage">Core Team</a></li>
+                                <li><a class="dropdown-item" href="#joinTeamPage">Volunteer Team</a></li>
+                                <li><a class="dropdown-item" href="#">Collaborations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--! Navbar section **ends-->
+
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+                data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                <!--! Hero/Home section **starts-->
+                <section class="hero hidden001" id="homePage">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Text -->
+                            <div class="col-md-6 homeAreaText">
+                                <div class="text">BrainSeed Networks Community!</div>
+                                <div class="hashtag">#BuildingSuccessTogether</div>
+                                <p class="home-text">
+                                    "Empowering tech enthusiasts, one seed at a time". At BrainSeed
+                                    Networks, Our community is dedicated to empowering tech
+                                    enthusiasts and fostering a love for technology.
+                                </p>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-primary" style="border: none"><i
+                                            class="icon fas fa-rocket"></i>
+                                        <span class="ms-2">Contact Us</span></a>
+                                    <a href="#" class="btn btn-outline-secondary ms-3"><i
+                                            class="icon fas fa-handshake"></i><span class="ms-2"> Join Us</span></a>
+                                </div>
+                            </div>
+                            <!-- Image -->
+                            <div class="col-md-6 homeImg">
+                                <img src=".\images\home-img.png" alt="hero-img" class="w-100" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--! Hero/Home section **ends-->
+
+                <!--! About Page **start -->
+                <section class="container-fluid hidden001" id="About-Page">
+                    <div class="aboutEle">
+                        <div id="aboutText">
+                            <div class="jumbotron mx-5">
+                                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"
+                                    class="about-heading">
+                                    <h1 class="display-4 headingStyle">
+                                        <span class="boldMe incrSizeOnMoblie">W</span>ho we are and
+                                        <span class="rightShiftOnMobile"><span
+                                                class="boldMe disapearMeOnMoblie">W</span>hat we
+                                            do
+                                            ?</span>
+                                    </h1>
+                                    <div class="UnderLineForTxt" style="margin-left: -5rem"></div>
+                                </div>
+                                <br /><br />
+                                <p class="lead">
+                                    By spreading education, our community seeks to bring about a change in the society via the actions we implement and to nourish every brain to have limitless power of thinking and imagination that will improve the lives of every individual present in the society, to bring together people, organisations, and systems willing to learn and collaborate across boundaries in pursuit of a common purpose of promoting technologies and sharing knowledge.
+                                </p>
+                                <hr class="my-4" />
+                                <p>
+                                    Our thinking is to not to let only ourselves grow but also let
+                                    you grow with us too.
+                                </p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-lg my-4"
+                                        style="font-size: 18px; font-weight: 500; border: none" href="#"
+                                        role="button">Learn
+                                        more</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="aboutImage">
+                            <div class="imgContainer">
+                                <img src="./images/aboutImg3.png" alt="About Img" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--! About page **end -->
+
+                <!-- ! Join us on other platforms **start-->
+                <section class="container-fuild hidden001" id="joinUsOnPlatforms">
+                    <div id="joinPlatforms">
+                        <div class="joinPlatformHeading">
+                            <h1 class="display-4 headingStyle">
+                                <span class="boldMe" style="font-size: 45px">J</span>oin Us
+                                <span class="boldMe" style="font-size: 45px">H</span>ere...
+                            </h1>
+                            <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
+                        </div>
+                        <div id="joinPlatformsDetail" class="my-5">
+                            <div class="my-4"></div>
+                            <div class="containerJoinPlatforms">
+                                <div class="gridItemForJoinPlatform">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp1 ">
+                                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            <h5 class="card-title">YouTube Content</h5>
+                                            <p class="card-text my-4">
+                                                Don't miss to subscribe us on YouTube for all our upcoming live and
+                                                recorded sessions.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridItemForJoinPlatform number2">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp2">
+                                            <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                                            <h5 class="card-title">Discord</h5>
+                                            <p class="card-text my-4">
+                                                For regular updates and knowing about our latest upcoming events, stay
+                                                connected to Discord.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridItemForJoinPlatform number3">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp3">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            <h5 class="card-title">Instagram</h5>
+                                            <p class="card-text my-4">
+                                                Follow us on Instagram for all latest giveaways, activities and lot more
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridItemForJoinPlatform number4">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp4">
+                                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                            <h5 class="card-title">LinkedIN Page</h5>
+                                            <p class="card-text my-4">
+                                                Join and follow us in LinkedIn for updates to latest giveaways and
+                                                learnings.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridItemForJoinPlatform number5">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp5">
+                                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                                            <h5 class="card-title">Open Source Projects</h5>
+                                            <p class="card-text my-4">
+                                                Start contributing in GitHub through many open repositories of our
+                                                community and lot more.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridItemForJoinPlatform number6">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body jp6">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <h5 class="card-title">Whatsapp</h5>
+                                            <p class="card-text my-4">
+                                                For regular updates and knowing about our latest upcoming events, stay
+                                                connected to WhatsApp.
+                                            </p>
+                                            <a href="#" class="btn btn-outline-dark">Visit Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ! Join us on other platforms **ends-->
+
+                <!-- ! Benefits of joining us **starts -->
+                <section class="fuild-container hidden001" id="benefitsOfJoiningUs">
+                    <div class="container">
+                        <div class="benifitcont">
+                            <!-- Text -->
+                            <h1 class="display-4 headingStyle">
+                                <span class="boldMe" style="font-size: 45px">B</span>enefit Of
+                                <span class="boldMe" style="font-size: 45px">J</span>oining <span class="boldMe"
+                                    style="font-size: 45px">U</span>s
+                            </h1>
+                            <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
+                            <br><br><br><br>
+                            <div class="text2">Collaborate, Learn, and Grow Together</div>
+                            <p class="card-text my-4">
+                                At Brainseed Networks, we provide a space for professionals, students, and enthusiasts
+                                to come together and share their passion for technology and innovation. Our community is
+                                dedicated to learning and growth, and we provide a wealth of resources to help you
+                                achieve your goals.
+                            </p>
+                            <div class="text2">Access Valuable Resources</div>
+                            <p class="card-text my-4">
+                                As a member of our community, you'll gain access to online forums, webinars, and
+                                workshops, where you can share your expertise, learn new skills, and stay up-to-date
+                                with the latest trends in your field. We offer a variety of resources to help you
+                                succeed, no matter where you are in your career.
+                            </p>
+                            <div class="text2">Network with Peers and Mentors</div>
+                            <p class="card-text my-4">
+                                Our community is made up of like-minded individuals who are passionate about technology
+                                and innovation. By joining us, you'll have the opportunity to network with peers and
+                                mentors who can offer valuable insights and advice. Whether you're looking for career
+                                guidance or technical support, our community is here to help you succeed.
+                            </p>
+                        </div>
+                        <!-- image -->
+                        <div id="benifitImage">
+                            <div class="imgContainer1">
+                                <img src="./images/benifit.jpg" alt="AbouImg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- ! Benefits of joining us **ends -->
+
+                <!-- ! Team Page **starts -->
+                <section class="container-fuild hidden001" id="teamMembersPage">
+                    <div id="teamMembersArea">
+                        <div id="founderTeam">
+                            <div class="teamMembersHeading teamMembersHeading1">
+                                <h1 class="display-4 headingStyle">
+                                    <span class="boldMe" style="font-size: 45px">F</span>ounding
+                                    <span class="boldMe" style="font-size: 45px">M</span>embers
+                                </h1>
+                                <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
+                            </div>
+                            <div class="founderMembersCards">
+                                <!-- Edit founders card here -->
+                                <div class="card number1">
+                                    <img src=".\images\coreMembersImg\ShipraShriparn.jpg" class="card-img-top"
+                                        alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Shipra Shriparn</h5>
+                                        <p class="card-text">Co-Founder</p>
+                                    </div>
+                                    <div class="card-body" style="flex-direction: row">
+                                        <a href="https://www.instagram.com/ShipraShriparn/" class="card-link"
+                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        <a href="https://twitter.com/Shipra_shriparn?t=LvZae7T7IRr51h1SHPmQ0A&s=08"
+                                            class="card-link" target="_blank"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a>
+                                        <a href="https://www.linkedin.com/in/shipra-shriparn-b36b58214/"
+                                            class="card-link" target="_blank"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card number2" style="transform: scale(1.1);">
+                                    <img src=".\images\coreMembersImg\SubhamGourisaria.jpg" class="card-img-top"
+                                        alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Subham Gourisaria</h5>
+                                        <p class="card-text">Founder</p>
+                                    </div>
+                                    <div class="card-body" style="flex-direction: row">
+                                        <a href="https://www.instagram.com/subham_smiling/" class="card-link"
+                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        <a href="https://twitter.com/Subham_Coder" class="card-link" target="_blank"><i
+                                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="https://www.linkedin.com/in/subham-gourisaria-a13418201/"
+                                            class="card-link" target="_blank"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card number3">
+                                    <img src=".\images\coreMembersImg\YashRajAnand.jpg" class="card-img-top"
+                                        alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Yash Raj Anand</h5>
+                                        <p class="card-text">Community Manager</p>
+                                    </div>
+                                    <div class="card-body" style="flex-direction: row">
+                                        <a href="https://instagram.com/yashranand?igshid=YmMyMTA2M2Y=" class="card-link"
+                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        <a href="https://www.linkedin.com/in/yash-raj-a-0ab34a21b" class="card-link"
+                                            target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="https://www.linkedin.com/in/yash-raj-a-0ab34a21b" class="card-link"
+                                            target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="coreTeam">
+                            <div class="teamMembersHeading">
+                                <h1 class="display-4 headingStyle">
+                                    <span class="boldMe" style="font-size: 45px">C</span>ore
+                                    <span class="boldMe" style="font-size: 45px">M</span>embers
+                                </h1>
+                                <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
+                            </div>
+
+                            <!-- core members carousel from here -->
+                            <div class="CoreMembersCards">
+
+                                <div id="coreMembersCarosoul">
+
+                                    <div class="slide-container swiper">
+                                        <div class="slide-content">
+                                            <div class="card-wrapper swiper-wrapper">
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a
+                                                                    href="https://www.linkedin.com/in/sparsh-bhardwaj-571322250"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="https://mobile.twitter.com/SparshBhardwaj5"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a
+                                                                    href="http://instagram.com/bhardwajsparsh?utm_source=qr"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\SparshBhardwaj.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Sparsh Bhardwaj</h2>
+                                                        <p class="description">
+                                                            Technical Lead
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="https://www.linkedin.com/in/devchouhan"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="https://twitter.com/DevradityaSingh"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a href="https://www.instagram.com/botdevsayshello/"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\DevChouhan.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Devraditya Singh Chouhan</h2>
+                                                        <p class="description">
+                                                            Backend Web-Developer Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="https://www.linkedin.com/in/sanskritiguptaa/"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="https://twitter.com/GuptaSanskritii"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a
+                                                                    href="https://instagram.com/sanskriti.guptaa?igshid=ZDdkNTZiNTM="><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\Sanskriti.jpg" alt="img01"
+                                                                class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Sanskriti Gupta</h2>
+                                                        <p class="description">
+                                                            Frontend Web-Developer Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a
+                                                                    href="https://www.linkedin.com/in/krishna-dev-ghosh-6aa990229"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a
+                                                                    href="https://twitter.com/krish_kdg?t=vkS99pdmVT4SMAEM4vbNWg&s=09"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a href="instagram.com/_kdg___/"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\KrishnaDevGhosh.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Krishna Dev Ghosh</h2>
+                                                        <p class="description">
+                                                            Frontend Web Developer Co-Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a
+                                                                    href="https://www.linkedin.com/in/alok-agarwal-27012004/"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="https://twitter.com/alokagarwal___"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a href="https://www.instagram.com/alokagarwal___/"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\AlokAgarwal.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Alok Agarwal</h2>
+                                                        <p class="description">
+                                                            Event Manager Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a
+                                                                    href="https://www.linkedin.com/in/atia-zareen-81a202214"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a
+                                                                    href="https://twitter.com/ZareenAtia?t=p3sMwFhaoZAJ_VdjR7_zwg&s=08"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a
+                                                                    href="https://www.instagram.com/invites/contact/?i=1sdt7xn1y7rh3&utm_content=nanlx0y"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\AtiaZareen.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Atia Zareen</h2>
+                                                        <p class="description">
+                                                            Social Media Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a
+                                                                    href="https://www.linkedin.com/in/anushka-saxena-b72738200"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="https://mobile.twitter.com/Anushkasaxena08"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a
+                                                                    href="https://www.instagram.com/paniccluster_arrest/"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\AnushkaSaxena.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Anushka Saxena</h2>
+                                                        <p class="description">
+                                                            Content Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-twitter-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\ShivaJha.jpg" alt="img01"
+                                                                class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Shiva Jha</h2>
+                                                        <p class="description">
+                                                            Operation Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-twitter-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\RazdaSarwar.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Razda Sarwar</h2>
+                                                        <p class="description">
+                                                            Photography Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="https://www.linkedin.com/in/suman-sengupta"><i
+                                                                        class="fab fa-linkedin"></i></a></li>
+                                                            <li><a
+                                                                    href="https://twitter.com/SS_The_G?t=voqD6ryyfozU8jprfjiKUw&s=09"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a href="https://www.instagram.com/itz_bubu_ind/"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\SumanSengupta.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Suman Sengupta</h2>
+                                                        <p class="description">
+                                                            Video Editor
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-twitter-square"></i></a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\TanayAnand.jpg"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Tanay Anand</h2>
+                                                        <p class="description">
+                                                            Marketing Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card swiper-slide">
+                                                    <div class="image-content">
+                                                        <div class="iconsHere">
+                                                            <li><a href="https://linktr.ee/sahills"><i
+                                                                        class="fab fa-facebook-square"></i></a></li>
+                                                            <li><a href="https://linktr.ee/sahills"><i
+                                                                        class="fab fa-twitter-square"></i></a></li>
+                                                            <li><a href="https://linktr.ee/sahills"><i
+                                                                        class="fab fa-instagram"></i></a></li>
+                                                        </div>
+                                                        <span class="overlay"></span>
+
+                                                        <div class="card-image">
+                                                            <img src=".\images\coreMembersImg\sahilDwivedi.png"
+                                                                alt="img01" class="card-img">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-content">
+                                                        <h2 class="name">Sahil Dwivedi</h2>
+                                                        <p class="description">
+                                                            Graphic Designer Leader
+                                                        </p>
+
+                                                        <p class="description">Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Perferendis, voluptatibus.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-button-next swiper-navBtn" id="caurosulNextBtn"
+                                            style="color: green;"></div>
+                                        <div class="swiper-button-prev swiper-navBtn" style="color: green;"></div>
+                                        <div class="swiper-pagination" style="color: green;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- core members carousel ends  here -->
+                                <div id="coreMemberButton">
+                                    <form action="/coremem" method="get" style="height: 100%; width: 100%;">
+                                        <button class="btn btn-outline-dark" type="submit"
+                                            style="margin: 0 34%; width: 32%;">
+                                            View All
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ! Team page **ends -->
+
+                <!-- ! Events page **starts -->
+
+                <section class="fluid-container hidden001" id="eventPage">
+                    <div id="eventArea">
+                        <div id="eventHeading">
+                            <h1 class="display-4 headingStyle" style="font-size: 34px">
+                                <span class="boldMe" style="font-size: 45px">E</span>vents
+                                <span class="boldMe" style="font-size: 45px">H</span>ere
+                            </h1>
+                            <div class="UnderLineForTxt my-2"></div>
+                        </div>
+                        <div id="eventContent">
+                            <div id="eventContentContainer">
+                                <div class="eventGrid-item number1">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="eventGrid-item number2">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="eventGrid-item number3">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="eventGrid-item number4">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="eventGrid-item number5">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="eventGrid-item number6">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                    alt="Avatar" />
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="eventContentButton">
+                                <form action="/eventDetails" method="get">
+                                    <button class="btn btn-outline-dark" type="submit" style="
+                    margin-top: 2rem;
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                    padding: 1rem 5rem;
+                  ">
+                                        View Upcoming Events
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ! Events page **ends -->
+
+                <!-- ! Blog page **starts -->
+                <section class="fuild-container hidden001" id="blogPage">
+                    <div id="blogArea">
+                        <div id="blogHeading">
+                            <h1 class="display-4 headingStyle" style="font-size: 34px">
+                                <span class="boldMe" style="font-size: 45px">B</span>logs
+                                <span class="boldMe" style="font-size: 45px">H</span>ere
+                            </h1>
+                            <div class="UnderLineForTxt my-2"></div>
+                        </div>
+                        <div id="blogPostsArea">
+                            <div class="blogPosts">
+                                <div class="carousel">
+                                    <input type="radio" name="slides" checked="checked" id="slide-1" />
+                                    <input type="radio" name="slides" id="slide-2" />
+                                    <input type="radio" name="slides" id="slide-3" />
+                                    <input type="radio" name="slides" id="slide-4" />
+                                    <input type="radio" name="slides" id="slide-5" />
+                                    <input type="radio" name="slides" id="slide-6" />
+                                    <ul class="carousel__slides">
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1041/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Tim Marshall</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1043/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Christian Joudrey</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1044/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Steve Carter</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1045/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Aleksandra Boguslawska</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1049/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Rosan Harmens</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                        <li class="carousel__slide">
+                                            <figure>
+                                                <div>
+                                                    <img src="https://picsum.photos/id/1052/800/450" alt="" />
+                                                </div>
+                                                <figcaption>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <span class="credit">Photo: Annie Spratt</span>
+                                                    <div class="blogDetail" style="margin: 0 50%">
+                                                        <a href="#" style="text-decoration: none">See More</a>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </li>
+                                    </ul>
+                                    <ul class="carousel__thumbnails">
+                                        <li>
+                                            <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                        <li>
+                                            <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                        <li>
+                                            <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                        <li>
+                                            <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                        <li>
+                                            <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                        <li>
+                                            <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
+                                                    alt="" /></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ! Blog page **ends -->
+
+                <!-- ! Join team **starts -->
+
+                <section class="fluid-container hidden001" id="joinTeamPage">
+                    <div class="container">
+                        <div id="joinTeamHeading">
+                            <div class="borderJoinTeamHeading">
+                                <h1 class="display-4 headingStyle">
+                                    <span class="boldMe" style="font-size: 50px">J</span>oin Us
+                                    <span class="boldMe" style="font-size: 50px">H</span>ere
+                                </h1>
+                                <div class="UnderLineForTxt my-2"></div>
+                            </div>
+                        </div>
+                        <div id="joinTeamCards">
+                            <div class="borderJoinTeamCard">
+                                <div class="card text-center mb-3">
+                                    <div class="card-body">
+                                        <h1 class="card-title">Join Core Team</h1>
+                                        <p class="card-text">
+                                            We at Brainseed networks with open arms invites you to register as a core
+                                            team member. As a member of the core team, you'll have the opportunity to
+                                            take on leadership roles, influence the direction and priorities of the
+                                            community, and make a real impact on the members and the broader community.
+                                            You'll also gain valuable networking opportunities and potential career
+                                            growth. Being part of the core team can give you access to valuable
+                                            networking opportunities, if you're passionate about technology and want to
+                                            make a difference in the community, joining the core team can be a great way
+                                            to achieve those goals
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                                <div class="card text-center mb-3">
+                                    <div class="card-body">
+                                        <h1 class="card-title">Join Volunteer Team</h1>
+                                        <p class="card-text">
+                                            Joining the volunteer team of a Brainseed Network community can be a
+                                            fulfilling experience. As a volunteer, you'll have the opportunity to
+                                            contribute to the community's mission, work on projects that align with your
+                                            interests and skills, and connect with like-minded individuals. Volunteering
+                                            can also help you gain valuable experience, improve your skills, and expand
+                                            your network. If you're passionate about technology and want to make a
+                                            difference, joining the volunteer team can be a great way to get involved
+                                            and make an impact.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ! Join team **ends -->
+
+                <!-- ! Show Off Page **starts -->
+
+                <section class="fluid-container hidden001" id="showoffPage">
+                    <section id="showOffPage1">
+                        <div class="communityPastAcheivementsBorder">
+                            <div class="acheiventsBlockBorder">
+                                <div class="acheiventsBlocks">
+                                    <div class="acheiventsIcon acheivementsElements">
+                                        <i class="icon fas fa-rocket"></i>
+                                    </div>
+                                    <span class="acheiventsCount acheivementsElements">
+                                        <div id="membersCount"></div>
+                                        +
+                                    </span>
+                                    <div class="acheiventsText acheivementsElements">
+                                        Community Members
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acheiventsBlockBorder">
+                                <div class="acheiventsBlocks">
+                                    <div class="acheiventsIcon acheivementsElements">
+                                        <i class="icon fas fa-rocket"></i>
+                                    </div>
+                                    <span class="acheiventsCount acheivementsElements">
+                                        <div id="eventsCount"></div>
+                                        +
+                                    </span>
+                                    <div class="acheiventsText acheivementsElements">Events</div>
+                                </div>
+                            </div>
+                            <div class="acheiventsBlockBorder">
+                                <div class="acheiventsBlocks">
+                                    <div class="acheiventsIcon acheivementsElements">
+                                        <i class="icon fas fa-rocket"></i>
+                                    </div>
+                                    <span class="acheiventsCount acheivementsElements">
+                                        <div id="opporCount"></div>
+                                        +
+                                    </span>
+                                    <div class="acheiventsText acheivementsElements">
+                                        Opportunities provided
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- sponsers page -->
+                    <section id="showOffPage2">
+                        <div class="ourSponsers">
+                            <div id="sponserHeading">
+                                <h1 class="display-4 headingStyle" style="font-size: 34px">
+                                    <span class="boldMe" style="font-size: 45px">O</span>ur
+                                    <span class="boldMe" style="font-size: 45px">S</span>ponsers
+                                </h1>
+                                <div class="UnderLineForTxt my-2"></div>
+                            </div>
+                            <div id="sponsersLogoArea">
+                                <div class="slider">
+                                    <div class="slide-track">
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                                                height="100" width="250" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- ! Show Off Page **ends -->
+
+                <!-- ! FAQ Page **starts -->
+
+                <section class="fluid-container hidden001" id="faqPage">
+                    <div id="faqPageInline">
+                        <div id="faqHeading">
+                            <h1 class="display-4 headingStyle" style="font-size: 34px">
+                                <span class="boldMe" style="font-size: 45px">FAQ</span>'s
+                            </h1>
+                            <div class="UnderLineForTxt my-2"></div>
+                        </div>
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item number1">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is Our Community?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong> Brainseed Network</strong>, a fastest growing community founded in
+                                        2022, where no. of skilled people work and help the society to keep aware &
+                                        develop the way of thinking & mentality towards as per the upcoming technology
+                                        trend by presenting you lots of webinar & events. Our thinking is to not to let
+                                        only ourselves grow but you too with us.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item number2">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Is Our Community a not-for-profit organisation?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Brainseed Network is a not-for-profit organization that presents you options in
+                                        large number to grow and improve yourself in a perfect & well optimized manner.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item number3">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How do I contact to the Community and how can I join your community??
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        You can contact to us by writing us a mail to brainseednetworks931@gmail.com or
+                                        just fill-up contact us block and as for joining us you can fill up the form
+                                        provided and we will contact u soon on the basis of the contact details filled.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item number4">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        Is there a fee or charge for membership?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        As per now we do not charge any fee for being a member of our community.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- ! FAQ Page **ends -->
+
+                <!-- ! Contact Us Page **starts -->
+
+                <section class="fluid-container hidden001" id="contactUs">
+                    <div id="contactSectionText">
+                        <div id="contactUsHeading">
+                            <h1 class="display-4 headingStyle">
+                                <span class="boldMe" style="font-size: 45px">C</span>ontact
+                                <span class="boldMe" style="font-size: 45px">U</span>s
+                            </h1>
+                            <div class="UnderLineForTxt my-2"></div>
+                        </div>
+                        <div id="contactUsForm">
+                            <div class="contactUsFormDetail">
+                                <!-- Form Creation -->
+                                <form action="/" method="post">
+                                    <div class="mb-3">
+                                        <label for="exampleInputName1" class="form-label">Your Name
+                                            <span style="font-weight: 200; color: gray">(required)</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="senderName0"
+                                            id="exampleInputName1" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email address
+                                            <span style="font-weight: 200; color: gray">(required)</span>
+                                        </label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" name="senderEmail0" required />
+                                        <div id="emailHelp" class="form-text">
+                                            We'll never share your email with anyone else.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputSubject1" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" name="senderSubject0"
+                                            id="exampleInputSubject1" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="textareaId" class="form-label">Message
+                                            <span style="font-weight: 200; color: gray">(required)</span>
+                                        </label>
+                                        <textarea name="senderMessage0" id="textareaId" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" style="border: none">
+                                        Submit
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contactSectionImage">
+                        <div class="displayContactUsImage">
+                            <img src="./images/aboutImg3.png" alt="Contact Img" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ! Contact Us Page **ends -->
+
+                <!-- ! Footer page **starts -->
+
+                <section id="footerSection">
+                    <footer>
+                        <div id="footerImg"></div>
+                        <div id="footerText">
+                            <!-- Left side -->
+                            <div class="FooterLeftTop">
+                                <h1>BrainSeed Networks</h1>
+                                <p>Brainseed Networks, a fastest growing community founded in 2022, where people work to
+                                    upskill themselves and help the society to keep aware & develop the way of thinking
+                                    & mentality towards the upcoming technology trend by exploring and witnessing lots
+                                    of webinars & events. Our thinking is to not to let only ourselves grow but also let
+                                    you grow with us too.</p>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#homePage">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#About-Page">About</a></li>
+                                        <li class="breadcrumb-item"><a href="#teamMembersPage">Team</a></li>
+                                        <li class="breadcrumb-item"><a href="#eventPage">Events</a></li>
+                                        <li class="breadcrumb-item"><a href="#blogPage">Blogs</a></li>
+                                        <li class="breadcrumb-item"><a href="#faqPage">Faq's</a></li>
+                                        <li class="breadcrumb-item"><a href="#contactUs">Contact Us</a></li>
+                                        <li class="breadcrumb-item"><a href="#joinTeamPage">Join Us</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="FooterLeftBottom" style="color: rgba(223, 223, 223, 0.445)"> &copy; Copyright
+                                Claimed</div>
+                            <!-- Right Side -->
+                            <div class="FooterRightTop">
+                                <div class="FooterText">
+                                    <!-- Google Map Copied Code -->
+                                    <iframe
+                                        src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.2128965383204!2d75.69805381491967!3d27.212464882999367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cffc30dacc2db%3A0xb78e5c340c935a95!2sUniversity%20of%20Engineering%20%26%20Management%20(UEM)%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1668854834320!5m2!1sen!2sin
+                                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                                        aria-hidden="false" tabindex="0">
+                                    </iframe>
+                                    <br>
+                                    <p>Address: UEMJ, rajasthan</p>
+                                    <p>Address: UEMJ, rajasthan</p>
+                                </div>
+                            </div>
+                            <div class="FooterRightBottom" style="color: rgba(223, 223, 223, 0.445)">2023-BrainSeed
+                                Networks
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+
+            <!-- ! Footer page **ends -->
+
+            <!--! Back to top button **starts -->
+            <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top"
+                style="border: none;">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <!--! Back to top button **ends -->
+
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+            <script src="./js/script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+                crossorigin="anonymous"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+</body>
+
+</html>
