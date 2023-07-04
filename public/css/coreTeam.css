@@ -13,6 +13,10 @@
     background-color: #ffffff;
 }
 
+#coreTeam .cardArea .ImgBox img {
+    height: 70%;
+}
+
 #leadTeam {
     height: 17%;
     width: 100%;
