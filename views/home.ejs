@@ -26,6 +26,7 @@
 
 <body>
 
+    <!-- Message for successfully/unsuccessfully sendout contanct request -->
     <% if(displayMessage.length> 0){%>
         <div class="alert alert-<%=typeOfMsg%>" role="alert" id="disapearMeAfter2Seconds">
             <span style="font-size: 1.1rem; font-weight: 700; padding-right: 0.5%;">
@@ -40,7 +41,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <!-- Brand here -->
-                        <img class="" style="height: 6rem; width: 9rem" src="./images/logo.png" alt="hero-img"
+                        <img class="" style="height: 6rem; width: 6.5rem; border-radius: 50%;" src="./images/logo2.png" alt="hero-img"
                             class="mw-50" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,7 +55,7 @@
                             <a class="nav-link" href="#About-Page">About</a>
                             <a class="nav-link" href="#teamMembersPage">Team</a>
                             <a class="nav-link" href="#eventPage">Events</a>
-                            <a class="nav-link" href="#blogPage">Blogs</a>
+                            <a class="nav-link" href="#testimonialPage">Testimonials</a>
                         </div>
                         <a href="#contactUs" class="btn btn-outline-secondary shadow-sm d-sm d-block ms-4">Contact
                             Us</a>
@@ -857,7 +858,7 @@
                 <!-- ! Events page **ends -->
 
                 <!-- ! Blog page **starts -->
-                <section class="fuild-container hidden001" id="blogPage">
+                <!-- <section class="fuild-container hidden001" id="blogPage">
                     <div id="blogArea">
                         <div id="blogHeading">
                             <h1 class="display-4 headingStyle" style="font-size: 34px">
@@ -991,9 +992,158 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
 
                 <!-- ! Blog page **ends -->
+
+                <!-- ! Testimonials page **starts -->
+
+                <section class="fluid-container" id="testimonialPage">
+                    <div id="blogHeading">
+                        <h1 class="display-4 headingStyle" style="font-size: 34px">
+                            <span class="boldMe" style="font-size: 45px">T</span>estimonials
+                            <span class="boldMe" style="font-size: 45px">H</span>ere
+                        </h1>
+                        <div class="UnderLineForTxt my-2"></div>
+                    </div>
+                    <section class="gradient-custom">
+                        <div class="container py-5">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-12">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!-- Carousel wrapper -->
+                                            <div id="carouselDarkVariant" class="carousel slide carousel-dark"
+                                                data-mdb-ride="carousel">
+
+                                                <!-- Inner -->
+                                                <div class="carousel-inner py-5">
+                                                    <!-- Single item -->
+                                                    <div class="carousel-item active">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-lg-10 col-xl-8">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 d-flex justify-content-center">
+                                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                                                            class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                                                                            alt="woman avatar" width="150"
+                                                                            height="150" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                                                                        <h4 class="mb-4">Maria Smantha - Web Developer
+                                                                        </h4>
+                                                                        <p class="mb-0 pb-3">
+                                                                            Lorem ipsum dolor sit amet, consectetur
+                                                                            adipisicing elit. A
+                                                                            aliquam amet animi blanditiis consequatur
+                                                                            debitis dicta
+                                                                            distinctio, enim error eum iste libero modi
+                                                                            nam natus
+                                                                            perferendis possimus quasi sint sit tempora
+                                                                            voluptatem. Est,
+                                                                            exercitationem id ipsa ipsum laboriosam
+                                                                            perferendis.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Single item -->
+                                                    <div class="carousel-item">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-lg-10 col-xl-8">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 d-flex justify-content-center">
+                                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                                                                            class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                                                                            alt="woman avatar" width="150"
+                                                                            height="150" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                                                                        <h4 class="mb-4">Lisa Cudrow - Graphic Designer
+                                                                        </h4>
+                                                                        <p class="mb-0 pb-3">
+                                                                            Sed ut perspiciatis unde omnis iste natus
+                                                                            error sit voluptatem
+                                                                            accusantium doloremque laudantium, totam rem
+                                                                            aperiam, eaque
+                                                                            ipsa quae ab illo inventore veritatis et
+                                                                            quasi architecto
+                                                                            beatae vitae dicta sunt explicabo. Nemo enim
+                                                                            ipsam voluptatem
+                                                                            quia voluptas sit aspernatur.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Single item -->
+                                                    <div class="carousel-item">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-lg-10 col-xl-8">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 d-flex justify-content-center">
+                                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                                                                            class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                                                                            alt="woman avatar" width="150"
+                                                                            height="150" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                                                                        <h4 class="mb-4">John Smith - Marketing
+                                                                            Specialist</h4>
+                                                                        <p class="mb-0 pb-3">
+                                                                            At vero eos et accusamus et iusto odio
+                                                                            dignissimos qui
+                                                                            blanditiis praesentium voluptatum deleniti
+                                                                            atque corrupti quos
+                                                                            dolores et quas molestias excepturi sint
+                                                                            occaecati cupiditate
+                                                                            non provident, similique sunt in culpa qui
+                                                                            officia mollitia
+                                                                            animi id laborum et dolorum fuga.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Inner -->
+
+                                                <!-- Controls -->
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-mdb-target="#carouselDarkVariant" data-mdb-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                    data-mdb-target="#carouselDarkVariant" data-mdb-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                            <!-- Carousel wrapper -->
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-2">
+                                        <i class="fas fa-quote-right fa-3x text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- ! Testimonials page **ends -->
 
                 <!-- ! Join team **starts -->
 
@@ -1337,7 +1487,7 @@
                                         <li class="breadcrumb-item"><a href="#About-Page">About</a></li>
                                         <li class="breadcrumb-item"><a href="#teamMembersPage">Team</a></li>
                                         <li class="breadcrumb-item"><a href="#eventPage">Events</a></li>
-                                        <li class="breadcrumb-item"><a href="#blogPage">Blogs</a></li>
+                                        <li class="breadcrumb-item"><a href="#testimonialPage">Testimonial</a></li>
                                         <li class="breadcrumb-item"><a href="#faqPage">Faq's</a></li>
                                         <li class="breadcrumb-item"><a href="#contactUs">Contact Us</a></li>
                                         <li class="breadcrumb-item"><a href="#joinTeamPage">Join Us</a></li>
@@ -1384,6 +1534,11 @@
                 integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
                 crossorigin="anonymous"></script>
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+            <!-- MDB -->
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+            <!-- Font Awesome -->
+            <script src="https://kit.fontawesome.com/dfebc2aeb7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
