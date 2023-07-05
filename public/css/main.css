@@ -975,6 +975,8 @@ section.hero .home-text {
 
 #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>.card-title {
     padding-bottom: 2rem;
+    color: rgb(0 78 0);
+    font-weight: bolder;
 }
 
 #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>a {
