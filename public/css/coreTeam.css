@@ -1,9 +1,17 @@
 #eventsHeader {
-    height: 30vmax !important;
+     height: 17vmax !important;
 }
 
 #eventsHeader>.events-heading {
     height: 100% !important;
+}
+
+#eventsHeader > .events-heading > .event-heading-block {
+background-color: rgb(1, 126, 1);
+}
+
+#eventsHeader > .events-heading > nav {
+    background-color: rgb(1, 126, 1);
 }
 
 #coreTeam {
@@ -70,7 +78,7 @@
     padding: 2% 7%;
     font-weight: 300;
     font-size: 3.5rem;
-    text-decoration: 1px underline;
+    text-align: center;
 }
 
 #wholeTeam {
@@ -86,7 +94,7 @@
     font-size: 3.5rem;
     height: 2%;
     width: 100%;
-    text-decoration: 1px underline;
+    text-align: center;
 }
 
 #wholeTeam #wholeTeamBorder {
@@ -102,6 +110,10 @@
     /* border: 2px solid black; */
     margin: 2% auto;
     padding: 2% 4%;
+}
+
+#wholeTeam .team h1 {
+    text-align: center;
 }
 
 #wholeTeam .team:nth-of-type(odd) {
@@ -146,7 +158,7 @@
 footer {
     width: 100%;
     height: 6vmax;
-    background-color: black;
+    background-color: rgb(1, 126, 1);
     padding: 5vh 2vw;
     display: flex;
     justify-content: center;
@@ -207,15 +219,17 @@ footer p span {
         height: 45vmax !important;
     }
     /* Cards */
-    #coreTeam .cardArea .textHere p:nth-child(1){
+/*     #coreTeam .cardArea .textHere p:nth-child(1){
         font-size: 1.4rem !important;
-    }
+    } */
     #coreTeam .cardArea .textHere p{
-        font-size: 1rem !important;
-        line-height: 1.4 !important;
+        font-size: 0.7rem !important;
+        line-height: 1.2 !important;
+        text-align: center;
     }
     #coreTeam .cardArea .textHere p:nth-last-child(1){
         font-size: 0.6rem !important;
+        text-align: center;
     }
 }
 
@@ -316,6 +330,7 @@ footer p span {
     height: 100%;
     width: 100%;
     object-fit: block;
+    border-radius: 25%;
     /* transition: all 0.5s; */
 }
 
@@ -336,6 +351,7 @@ footer p span {
 #coreTeam .cardArea .textHere p:nth-child(1){
     font-size: 1.8rem;
     font-weight: 800;
+    text-align: center;
 }
 
 #coreTeam .cardArea .textHere p{
@@ -366,6 +382,7 @@ footer p span {
     flex-direction: column;
     opacity: 0;
     transition: 0.6s;
+    border-radius: 25%;
     /* border: 2px #45e19f; */
 }
 .cont1:hover{
