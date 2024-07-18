@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BrainSeed Networks</title>
+    <meta name="description" content="TriMorphic Technologies - Your partner in AR VR & Development solutions.">
+    <title>TriMorphic Technologies</title>
     <link rel="shortcut icon" href="assets/img/brand/favicon.svg" type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,13 +20,21 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/dfebc2aeb7.js" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Message for successfully/unsuccessfully sendout contanct request -->
     <% if(displayMessage.length> 0){%>
-        <div class="alert alert-<%=typeOfMsg%>" role="alert" id="disapearMeAfter2Seconds">
+        <div class="alert alert-<%=typeOfMsg%>" role="alert" id="disapearMeAfter2Seconds" style="z-index: 999;">
             <span style="font-size: 1.1rem; font-weight: 700; padding-right: 0.5%;">
                 <%= displayMessageHeading %>:
             </span>
@@ -33,13 +42,30 @@
         </div>
         <%}%>
 
+            <!-- cursor animation effect -->
+            <div class="cursor-dot" data-cursor-dot></div>
+            <div class="cursor-outline" data-cursor-outline></div>
+            <!-- cursor animation effect Ends-->
+
+            <!-- The whatsapp one -->
+            <div class="whatsapp_float autoShow">
+                <a href="https://wa.me/91xxxxxxxxxx" target="_blank"><img
+                        src="https://static.vecteezy.com/system/resources/previews/016/716/480/original/whatsapp-icon-free-png.png"
+                        width="50px" alt="whatsapp" class="whatsapp_float_btn"></a>
+            </div>
+
+            <!-- The video -->
+            <video autoplay muted loop id="myVideo">
+                <source src="./images/bg_vid.mp4" type="video/mp4">
+            </video>
+
             <!--! Navbar section **Start-->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg" style="z-index: 9;">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <!-- Brand here -->
-                        <img class="" style="height: 6rem; width: 6.5rem; border-radius: 50%;" src="./images/logo2.jpg" alt="hero-img"
-                            class="mw-50" />
+                        <img class="" style="height: 4rem; width: 4rem; filter: invert(1);" src="./images/logo.png"
+                            alt="LOGO" class="mw-50" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -50,8 +76,8 @@
                         <div class="navbar-nav ms-auto">
                             <a class="nav-link active" aria-current="page" href="#homePage">Home</a>
                             <a class="nav-link" href="#About-Page">About</a>
-                            <a class="nav-link" href="#teamMembersPage">Team</a>
-                            <a class="nav-link" href="#eventPage">Events</a>
+                            <a class="nav-link" href="#teamMembersPage">Services</a>
+                            <a class="nav-link" href="#eventPage">Projects</a>
                             <a class="nav-link" href="#testimonialPage">Testimonials</a>
                         </div>
                         <a href="#contactUs" class="btn btn-outline-secondary shadow-sm d-sm d-block ms-4">Contact
@@ -71,44 +97,49 @@
                 </div>
             </nav>
             <!--! Navbar section **ends-->
-
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
                 data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+
                 <!--! Hero/Home section **starts-->
-                <section class="hero hidden001" id="homePage">
-                    <div class="container-X" style="width: 75%; margin: auto;">
-                        <div class="row">
+                <section class="hero hidden001 contentInVideo" id="homePage">
+                    <div class="container-X" style="width: 60%; margin: auto;">
+                        <div class="padding_btw">
                             <!-- Text -->
-                            <div class="col-md-6 homeAreaText">
-                                <div class="text">BrainSeed Networks Community!</div>
-                                <div class="hashtag">#BuildingSuccessTogether</div>
-                                <p class="home-text">
-                                    "Empowering tech enthusiasts, one seed at a time". At BrainSeed
-                                    Networks, Our community is dedicated to empowering tech
-                                    enthusiasts and fostering a love for technology.
+                            <div class="homeAreaText autoShow">
+                                <div class="text">TriMorphic Technologies</div>
+                                <div class="hashtag">#WitnessTheMagic</div>
+                                <p class="home-text alignPara">
+                                    ”Welcome to Trimorphic Technologies provider of innovation in computer technology
+                                    solutions.” Being a vibrant sfirm, we mainly deal with web development services,
+                                    mobile app development, and modern solutions for AR/VR/MR. In our company, you will
+                                    have the team of hardworking professionals who are equally dedicated to turn your
+                                    dreams into a reality by providing you unique and quality services that you deserve.
+                                    Come take a ride with us into the world of the future, technology and let us guide
+                                    you in how to become a leader in your business. We at Trimorphic Technologies work
+                                    hard to ensure that your success is our success.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#" class="btn btn-primary" style="border: none"><i
-                                            class="icon fas fa-rocket"></i>
-                                        <span class="ms-2">Contact Us</span></a>
-                                    <a href="#" class="btn btn-outline-secondary ms-3"><i
-                                            class="icon fas fa-handshake"></i><span class="ms-2"> Join Us</span></a>
-                                </div>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-primary" style="border: none"><i
+                                        class="icon fas fa-rocket"></i>
+                                    <span class="ms-2">Contact Us</span></a>
+                                <a href="#" class="btn btn-outline-secondary ms-3"><i
+                                        class="icon fas fa-handshake"></i><span class="ms-2"> Join Us</span></a>
                             </div>
                             <!-- Image -->
-                            <div class="col-md-6 homeImg">
+                            <!-- <div class="col-md-6 homeImg">
                                 <img src=".\images\home-img.png" alt="hero-img" class="w-100" />
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
                 <!--! Hero/Home section **ends-->
 
-                <!--! About Page **start -->
+                <!--! About Page (Do not remove) **start -->
                 <section class="container-fluid hidden001" id="About-Page">
                     <div class="aboutEle">
                         <div id="aboutText">
-                            <div class="jumbotron mx-5">
+                            <div class="jumbotron">
                                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"
                                     class="about-heading">
                                     <h1 class="display-4 headingStyle">
@@ -121,11 +152,20 @@
                                     <div class="UnderLineForTxt" style="margin-left: -5rem"></div>
                                 </div>
                                 <br /><br />
-                                <p class="lead">
-                                    By spreading education, our community seeks to bring about a change in the society via the actions we implement and to nourish every brain to have limitless power of thinking and imagination that will improve the lives of every individual present in the society, to bring together people, organisations, and systems willing to learn and collaborate across boundaries in pursuit of a common purpose of promoting technologies and sharing knowledge.
+                                <p class="lead alignPara">
+                                    Trimorphic Technologies the technology firm that specialise in innovation of
+                                    computer technologies. As a young and progressive Tech firm, we mostly focus on the
+                                    web development services, mobile application development, and innovative solutions
+                                    for, Augmented Reality, Virtual Reality, and Mixed Reality. Here at our company, you
+                                    will find a team of dedicated hardworking opinionated professionals who will assist
+                                    you in turning your dreams into a reality by availing to you appropriate quality
+                                    services that you deserve. Take a ride with us to the world of the future,
+                                    technology and join us on how the leadership in your business can be enhanced. At
+                                    Trimorphic Technologies, we do not take the effort lightly to make sure that, your
+                                    success is Trimorphic Technologies success.
                                 </p>
                                 <hr class="my-4" />
-                                <p>
+                                <p class="alignPara">
                                     Our thinking is to not to let only ourselves grow but also let
                                     you grow with us too.
                                 </p>
@@ -137,11 +177,62 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="aboutImage">
+                        <!-- <div id="aboutImage">
                             <div class="imgContainer">
                                 <img src="./images/aboutImg3.png" alt="About Img" />
                             </div>
+                        </div> -->
+                    </div>
+                </section>
+                <!--! About page **end -->
+
+                <!--! About Page **start -->
+                <section class="container-fluid hidden001 About-Page">
+                    <div class="aboutEle">
+                        <div class="aboutText">
+                            <div class="jumbotron">
+                                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"
+                                    class="about-heading autoShow">
+                                    <h1 class="display-4 headingStyle">
+                                        <span class="boldMe incrSizeOnMoblie">W</span>ho we are and
+                                        <span class="rightShiftOnMobile"><span
+                                                class="boldMe disapearMeOnMoblie">W</span>hat we
+                                            do
+                                            ?</span>
+                                    </h1>
+                                    <div class="UnderLineForTxt" style="margin-left: -5rem"></div>
+                                </div>
+                                <br /><br />
+                                <p class="lead alignPara autoShow">
+                                    Trimorphic Technologies the technology firm that specialise in innovation of
+                                    computer technologies. As a young and progressive Tech firm, we mostly focus on the
+                                    web development services, mobile application development, and innovative solutions
+                                    for, Augmented Reality, Virtual Reality, and Mixed Reality. Here at our company, you
+                                    will find a team of dedicated hardworking opinionated professionals who will assist
+                                    you in turning your dreams into a reality by availing to you appropriate quality
+                                    services that you deserve. Take a ride with us to the world of the future,
+                                    technology and join us on how the leadership in your business can be enhanced. At
+                                    Trimorphic Technologies, we do not take the effort lightly to make sure that, your
+                                    success is Trimorphic Technologies success.
+                                </p>
+                                <hr class="my-4" />
+                                <p class="autoShow descPara">
+                                    Our thinking is to not to let only ourselves grow but also let
+                                    you grow with us too.
+                                </p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-lg my-4 autoShow"
+                                        style="font-size: 18px; font-weight: 500; border: 1px solid #000" href="#"
+                                        role="button">Learn
+                                        more</a>
+                                </p>
+                            </div>
                         </div>
+                        <!-- <div class="aboutImage">
+                            <div class="imgContainer">
+                                <img src="./images/aboutImg3.png" alt="About Img" />
+                            </div>
+                        </div> -->
                     </div>
                 </section>
                 <!--! About page **end -->
@@ -149,7 +240,7 @@
                 <!-- ! Join us on other platforms **start-->
                 <section class="container-fuild hidden001" id="joinUsOnPlatforms">
                     <div id="joinPlatforms">
-                        <div class="joinPlatformHeading">
+                        <div class="joinPlatformHeading autoShow">
                             <h1 class="display-4 headingStyle">
                                 <span class="boldMe" style="font-size: 45px">J</span>oin Us
                                 <span class="boldMe" style="font-size: 45px">H</span>ere...
@@ -159,7 +250,7 @@
                         <div id="joinPlatformsDetail" class="my-5">
                             <div class="my-4"></div>
                             <div class="containerJoinPlatforms">
-                                <div class="gridItemForJoinPlatform">
+                                <div class="gridItemForJoinPlatform negXAxisTransitionAnimation">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp1 ">
                                             <i class="fa fa-youtube-play" aria-hidden="true"></i>
@@ -172,7 +263,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gridItemForJoinPlatform number2">
+                                <div class="gridItemForJoinPlatform number2 autoBlur">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp2">
                                             <i class="fa-brands fa-discord" aria-hidden="true"></i>
@@ -185,7 +276,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gridItemForJoinPlatform number3">
+                                <div class="gridItemForJoinPlatform number3 posXAxisTransitionAnimation">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp3">
                                             <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -197,7 +288,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gridItemForJoinPlatform number4">
+                                <div class="gridItemForJoinPlatform number4 negXAxisTransitionAnimation">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp4">
                                             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
@@ -210,7 +301,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gridItemForJoinPlatform number5">
+                                <div class="gridItemForJoinPlatform number5 autoBlur">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp5">
                                             <i class="fa fa-github-square" aria-hidden="true"></i>
@@ -223,7 +314,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gridItemForJoinPlatform number6">
+                                <div class="gridItemForJoinPlatform number6 posXAxisTransitionAnimation">
                                     <div class="card text-center mb-3">
                                         <div class="card-body jp6">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
@@ -245,126 +336,153 @@
 
                 <!-- ! Benefits of joining us **starts -->
                 <section class="fuild-container hidden001" id="benefitsOfJoiningUs">
-                    <div class="container">
+                    <div class="container-x">
                         <div class="benifitcont">
                             <!-- Text -->
-                            <h1 class="display-4 headingStyle">
+                            <h1 class="display-4 headingStyle autoShow">
                                 <span class="boldMe" style="font-size: 45px">B</span>enefit Of
-                                <span class="boldMe" style="font-size: 45px">J</span>oining <span class="boldMe"
+                                <span class="boldMe" style="font-size: 45px">H</span>iring <span class="boldMe"
                                     style="font-size: 45px">U</span>s
                             </h1>
                             <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
                             <br><br><br><br>
-                            <div class="text2">Collaborate, Learn, and Grow Together</div>
-                            <p class="card-text my-4">
-                                At Brainseed Networks, we provide a space for professionals, students, and enthusiasts
-                                to come together and share their passion for technology and innovation. Our community is
-                                dedicated to learning and growth, and we provide a wealth of resources to help you
-                                achieve your goals.
-                            </p>
-                            <div class="text2">Access Valuable Resources</div>
-                            <p class="card-text my-4">
-                                As a member of our community, you'll gain access to online forums, webinars, and
-                                workshops, where you can share your expertise, learn new skills, and stay up-to-date
-                                with the latest trends in your field. We offer a variety of resources to help you
-                                succeed, no matter where you are in your career.
-                            </p>
-                            <div class="text2">Network with Peers and Mentors</div>
-                            <p class="card-text my-4">
-                                Our community is made up of like-minded individuals who are passionate about technology
-                                and innovation. By joining us, you'll have the opportunity to network with peers and
-                                mentors who can offer valuable insights and advice. Whether you're looking for career
-                                guidance or technical support, our community is here to help you succeed.
-                            </p>
+                            <div class="eleOfJoin">
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Expertise and Experience</div>
+                                    <p class="card-text my-4 alignPara">
+                                        Trimorphic Technologies, the technology firm that specialise in innovation of
+                                        computer
+                                        technologies.
+                                        As a young and progressive sfirm, we mostly focus on the web development
+                                        services,
+                                        mobile application
+                                        and innovative solutions for, Augmented Reality, Virtual Reality, and Mixed
+                                        Reality. Here at our company,
+                                        development, you will find a team of dedicated hardworking opinionated
+                                        professionals
+                                        who will assist
+                                        you in turning your dreams into reality by availing to you appropriate quality
+                                        services that you deserve.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Customized Solutions</div>
+                                    <p class="card-text my-4 alignPara">
+                                        Trimorphic Technologies the technology firm who had specialised in innovation of
+                                        computer technologies.
+                                        Given the fact that we are young and progressive sfirm, we mainly concern with
+                                        the
+                                        Web Development Services,
+                                        Mobile Application Development, and the value-added services in Augmented
+                                        Reality,
+                                        Virtual Reality, and Mixed Reality.
+                                        Here at our company you will deal with hardworking opinionated professionals who
+                                        will help you to make your dreams
+                                        come true availing with you quality services deserving of.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Quality and Reliability</div>
+                                    <p class="card-text my-4 alignPara">
+                                        Trimorphic Technologies, the technology firm which has been established with the
+                                        prime
+                                        focus on the innovation of
+                                        computer technologies. This is because ofcurrent realities that we are a young
+                                        and
+                                        progressive incorporated sfirm
+                                        whereby we mostly deal with Web Development Services, Mobile Application
+                                        Development, and; Augmented Reality,
+                                        Virtual Reality, & Mixed Reality Value added Services. Here at our company you
+                                        are
+                                        to be dealing with tired
+                                        insolite professionals who will help you to make your dreams come true helping
+                                        you
+                                        avail with quality services
+                                        you deserve.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Cost-Effective Services</div>
+                                    <p class="card-text my-4 alignPara">
+                                        This means that our services prices are friendly to the pocket without at any
+                                        one
+                                        time
+                                        having to sacrifice on quality.
+                                        It is the ardent desire of our company to ensure that we furnish you with
+                                        solutions
+                                        that lower the cost of doing
+                                        business with us while ensured you get a worthy value for your money.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Timely Delivery</div>
+                                    <p class="card-text my-4 alignPara">
+                                        We respect your busy schedule and that is why our clients have always been our
+                                        priority
+                                        by delivering their work on
+                                        the agreed upon time. Our team of employees observes a highly systematic project
+                                        cycle so as to deliver your projects
+                                        on time and efficiently.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Comprehensive Support</div>
+                                    <p class="card-text my-4 alignPara">
+                                        This is not the end of our duty to our clients; instead, it is the beginning of
+                                        the
+                                        process. We provide support and maintenance
+                                        services to guarantee that your solutions are working effectively and that their
+                                        implementation is as easy as possible.
+                                    </p>
+                                </div>
+                                <br><br>
+                                <div class="left_right autoBlur">
+                                    <div class="text2">Innovation and Creativity</div>
+                                    <p class="card-text my-4 alignPara">
+                                        We are innovation and creative creatures, on top of our respective positions. To
+                                        deliver more options for you, our team has alive
+                                        interest in new concepts and possibility of technologies to make you unique.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <!-- image -->
-                        <div id="benifitImage">
+                        <!-- <div id="benifitImage">
                             <div class="imgContainer1">
                                 <img src="./images/benifit.jpg" alt="AbouImg" />
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </section>
                 <!-- ! Benefits of joining us **ends -->
 
-                <!-- ! Team Page **starts -->
+                <!--  ! Team Page **starts -->
                 <section class="container-fuild hidden001" id="teamMembersPage">
                     <div id="teamMembersArea">
-                        <div id="founderTeam">
-                            <div class="teamMembersHeading teamMembersHeading1">
-                                <h1 class="display-4 headingStyle">
-                                    <span class="boldMe" style="font-size: 45px">F</span>ounding
-                                    <span class="boldMe" style="font-size: 45px">M</span>embers
-                                </h1>
-                                <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
-                            </div>
-                            <div class="founderMembersCards">
-                                <!-- Edit founders card here -->
-                                <div class="card number1">
-                                    <img src=".\images\coreMembersImg\ShipraShriparn.jpg" class="card-img-top"
-                                        alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Shipra Shriparn</h5>
-                                        <p class="card-text">Co-Founder</p>
-                                    </div>
-                                    <div class="card-body" style="flex-direction: row">
-                                        <a href="https://www.instagram.com/ShipraShriparn/" class="card-link"
-                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        <a href="https://twitter.com/Shipra_shriparn?t=LvZae7T7IRr51h1SHPmQ0A&s=08"
-                                            class="card-link" target="_blank"><i class="fa fa-twitter"
-                                                aria-hidden="true"></i></a>
-                                        <a href="https://www.linkedin.com/in/shipra-shriparn-b36b58214/"
-                                            class="card-link" target="_blank"><i class="fa fa-linkedin"
-                                                aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="card number2" style="transform: scale(1.1);">
-                                    <img src=".\images\coreMembersImg\SubhamGourisaria.jpg" class="card-img-top"
-                                        alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Subham Gourisaria</h5>
-                                        <p class="card-text">Founder</p>
-                                    </div>
-                                    <div class="card-body" style="flex-direction: row">
-                                        <a href="https://www.instagram.com/subham_smiling/" class="card-link"
-                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        <a href="https://twitter.com/Subham_Coder" class="card-link" target="_blank"><i
-                                                class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        <a href="https://www.linkedin.com/in/subham-gourisaria-a13418201/"
-                                            class="card-link" target="_blank"><i class="fa fa-linkedin"
-                                                aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="card number3">
-                                    <img src=".\images\coreMembersImg\YashRajAnand.jpg" class="card-img-top"
-                                        alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Yash Raj Anand</h5>
-                                        <p class="card-text">Community Manager</p>
-                                    </div>
-                                    <div class="card-body" style="flex-direction: row">
-                                        <a href="https://instagram.com/yashranand?igshid=YmMyMTA2M2Y=" class="card-link"
-                                            target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        <a href="https://www.linkedin.com/in/yash-raj-a-0ab34a21b" class="card-link"
-                                            target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        <a href="https://www.linkedin.com/in/yash-raj-a-0ab34a21b" class="card-link"
-                                            target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div id="coreTeam">
-                            <div class="teamMembersHeading">
+                            <div class="teamMembersHeading autoShow">
                                 <h1 class="display-4 headingStyle">
-                                    <span class="boldMe" style="font-size: 45px">C</span>ore
                                     <span class="boldMe" style="font-size: 45px">M</span>embers
+                                    <span class="boldMe" style="font-size: 45px">H</span>ere
                                 </h1>
                                 <div class="UnderLineForTxt my-2" style="margin-left: -2rem"></div>
                             </div>
 
+
+
+
                             <!-- core members carousel from here -->
-                            <div class="CoreMembersCards">
+
+
+
+                            <div class="CoreMembersCards autoShow">
 
                                 <div id="coreMembersCarosoul">
 
@@ -712,15 +830,23 @@
                                     </div>
                                 </div>
 
+
+
+
+
                                 <!-- core members carousel ends  here -->
-                                <div id="coreMemberButton">
+
+
+
+
+                                <!-- <div id="coreMemberButton">
                                     <form action="/coremem" method="get" style="height: 100%; width: 100%;">
                                         <button class="btn btn-outline-dark" type="submit"
                                             style="margin: 0 34%; width: 32%;">
                                             View All
                                         </button>
                                     </form>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -728,126 +854,98 @@
                 <!-- ! Team page **ends -->
 
                 <!-- ! Events page **starts -->
-
                 <section class="fluid-container hidden001" id="eventPage">
                     <div id="eventArea">
                         <div id="eventHeading">
-                            <h1 class="display-4 headingStyle" style="font-size: 34px">
-                                <span class="boldMe" style="font-size: 45px">E</span>vents
-                                <span class="boldMe" style="font-size: 45px">H</span>ere
+                            <h1 class="display-4 headingStyle autoShow" style="font-size: 34px">
+                                <span class="boldMe" style="font-size: 45px">O</span>ur
+                                <span class="boldMe" style="font-size: 45px">S</span>ample
+                                <span class="boldMe" style="font-size: 45px">P</span>rojects
                             </h1>
                             <div class="UnderLineForTxt my-2"></div>
                         </div>
                         <div id="eventContent">
                             <div id="eventContentContainer">
-                                <div class="eventGrid-item number1">
+                                <div class="eventGrid-item number1 negXAxisTransitionAnimation">
                                     <div class="flip-card">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                <img src="https://th.bing.com/th/id/OIP.VKSMTm3rkmAaxYlnLyH0owHaEK?rs=1&pid=ImgDetMain"
                                                     alt="Avatar" />
                                             </div>
                                             <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
+                                                <h1>VR Project</h1>
+                                                <p>Computer Software</p>
+                                                <p>Virtual Reality based Education Class System (Demo)
+                                                    <br> <a href="https://www.youtube.com/watch?v=GuUEh_AwdmQ"
+                                                        target="_blank"
+                                                        style="text-decoration: none; color: aliceblue; font-weight: 800;">visit
+                                                        link</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="eventGrid-item number2">
+                                <div class="eventGrid-item number2 posXAxisTransitionAnimation">
                                     <div class="flip-card">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                                                    alt="Avatar" />
+                                                <img src="./images/project_wd.png" alt="Avatar" />
                                             </div>
                                             <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
+                                                <h1>TriMorphic Website</h1>
+                                                <p>Web Development</p>
+                                                <p>Homepage for site.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="eventGrid-item number3">
+                                <div class="eventGrid-item number3 negXAxisTransitionAnimation">
                                     <div class="flip-card">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                <img src="https://th.bing.com/th/id/OIP.McfOetGPeL8rjVjygkjfzgHaFc?rs=1&pid=ImgDetMain"
                                                     alt="Avatar" />
                                             </div>
                                             <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
+                                                <h1>NGO website</h1>
+                                                <p>Web Development</p>
+                                                <p>An Ngo site developed for xyz.com</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="eventGrid-item number4">
+                                <div class="eventGrid-item number4 posXAxisTransitionAnimation">
                                     <div class="flip-card">
                                         <div class="flip-card-inner">
                                             <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                                <img src="https://th.bing.com/th/id/OIP.-heXM0ZYq-7bkiLOD0gyfAHaHa?rs=1&pid=ImgDetMain"
                                                     alt="Avatar" />
                                             </div>
                                             <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="eventGrid-item number5">
-                                    <div class="flip-card">
-                                        <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                                                    alt="Avatar" />
-                                            </div>
-                                            <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="eventGrid-item number6">
-                                    <div class="flip-card">
-                                        <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                                <img src="https://th.bing.com/th?id=OIP.SGQCj7eA1C3zjj-X9-PeKQHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                                                    alt="Avatar" />
-                                            </div>
-                                            <div class="flip-card-back">
-                                                <h1>John Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
+                                                <h1>Upcoming</h1>
+                                                <p>Unknown</p>
+                                                <p>None</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="eventContentButton">
-                                <form action="/eventDetails" method="get">
-                                    <button class="btn btn-outline-dark" type="submit" style="
+                            <!-- <div id="eventContentButton">
+                            <form action="/eventDetails" method="get">
+                                <button class="btn btn-outline-dark" type="submit" style="
                     margin-top: 2rem;
                     font-size: 1.3rem;
                     font-weight: 300;
                     padding: 1rem 5rem;
                   ">
-                                        View Upcoming Events
-                                    </button>
-                                </form>
-                            </div>
+                                    View More Projects
+                                </button>
+                            </form>
+                        </div> -->
                         </div>
                     </div>
                 </section>
@@ -997,13 +1095,13 @@
 
                 <section class="fluid-container" id="testimonialPage">
                     <div id="blogHeading">
-                        <h1 class="display-4 headingStyle" style="font-size: 34px">
+                        <h1 class="display-4 headingStyle autoShow" style="font-size: 34px">
                             <span class="boldMe" style="font-size: 45px">T</span>estimonials
                             <span class="boldMe" style="font-size: 45px">H</span>ere
                         </h1>
                         <div class="UnderLineForTxt my-2"></div>
                     </div>
-                    <section class="gradient-custom">
+                    <section class="gradient-custom autoShow">
                         <div class="container py-5">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-12">
@@ -1011,7 +1109,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <!-- Carousel wrapper -->
-                                            
+
 
                                             <div id="carouselExampleDark" class="carousel carousel-dark slide">
                                                 <div class="carousel-indicators">
@@ -1038,7 +1136,7 @@
                                                                         class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
                                                                         <h4 class="mb-4">Maria Smantha - Web Developer
                                                                         </h4>
-                                                                        <p class="mb-0 pb-3">
+                                                                        <p class="mb-0 pb-3 alignPara">
                                                                             Lorem ipsum dolor sit amet, consectetur
                                                                             adipisicing elit. A
                                                                             aliquam amet animi blanditiis consequatur
@@ -1069,7 +1167,7 @@
                                                                         class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
                                                                         <h4 class="mb-4">Maria Smantha - Web Developer
                                                                         </h4>
-                                                                        <p class="mb-0 pb-3">
+                                                                        <p class="mb-0 pb-3 alignPara">
                                                                             Lorem ipsum dolor sit amet, consectetur
                                                                             adipisicing elit. A
                                                                             aliquam amet animi blanditiis consequatur
@@ -1100,7 +1198,7 @@
                                                                         class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
                                                                         <h4 class="mb-4">Maria Smantha - Web Developer
                                                                         </h4>
-                                                                        <p class="mb-0 pb-3">
+                                                                        <p class="mb-0 pb-3 alignPara">
                                                                             Lorem ipsum dolor sit amet, consectetur
                                                                             adipisicing elit. A
                                                                             aliquam amet animi blanditiis consequatur
@@ -1149,7 +1247,7 @@
                 <section class="fluid-container hidden001" id="joinTeamPage">
                     <div class="container">
                         <div id="joinTeamHeading">
-                            <div class="borderJoinTeamHeading">
+                            <div class="borderJoinTeamHeading autoShow">
                                 <h1 class="display-4 headingStyle">
                                     <span class="boldMe" style="font-size: 50px">J</span>oin Us
                                     <span class="boldMe" style="font-size: 50px">H</span>ere
@@ -1159,13 +1257,14 @@
                         </div>
                         <div id="joinTeamCards">
                             <div class="borderJoinTeamCard">
-                                <div class="card text-center mb-3">
+                                <div class="card text-center mb-3 negXAxisTransitionAnimation">
                                     <div class="card-body">
                                         <h1 class="card-title">Core Team</h1>
-                                        <p class="card-text">
-                                           We at <strong style="color:rgb(0 78 0);">Brainseed networks</strong> with open arms invites you to register as a <br><strong style="color:rgb(0 78 0);">Core
-                                                Team Member!</strong>
-                                                <br><br>
+                                        <p class="card-text alignPara">
+                                            We at <strong>Brainseed networks</strong> with
+                                            open
+                                            arms invites you to register as a <br><strong>Core Team Member!</strong>
+                                            <br><br>
                                             As a member of the core team, you'll have the opportunity to
                                             take on leadership roles, influence the direction and priorities of the
                                             community, and make a real impact on the members and the broader community.
@@ -1180,14 +1279,19 @@
                                         <a href="#" class="btn btn-primary">Apply Here!</a>
                                     </div>
                                 </div>
-                                <div class="card text-center mb-3">
+                                <div class="card text-center mb-3 posXAxisTransitionAnimation">
                                     <div class="card-body">
                                         <h1 class="card-title">Volunteer Team</h1>
-                                        <p class="card-text" style="padding-bottom: 40px;">
-                                            Joining the <strong style="color:rgb(0 78 0);">Volunteer Team</strong> of the <strong style="color:rgb(0 78 0);">Brainseed Network Community</strong> can be a
-                                            fulfilling experience.<br><br> As a volunteer, you'll have the opportunity to
+                                        <p class="card-text alignPara" style="padding-bottom: 40px;">
+                                            Joining the <strong>Volunteer Team</strong> of
+                                            the
+                                            <strong>Brainseed Network Community</strong> can
+                                            be a
+                                            fulfilling experience.<br><br> As a volunteer, you'll have the opportunity
+                                            to
                                             contribute to the community's mission, work on projects that align with your
-                                            interests and skills, and connect with like-minded individuals. <br><br> Volunteering
+                                            interests and skills, and connect with like-minded individuals. <br><br>
+                                            Volunteering
                                             can also help you gain valuable experience, improve your skills, and expand
                                             your network. If you're passionate about technology and want to make a
                                             difference, joining the volunteer team can be a great way to get involved
@@ -1207,7 +1311,7 @@
 
                 <section class="fluid-container hidden001" id="showoffPage">
                     <section id="showOffPage1">
-                        <div class="communityPastAcheivementsBorder">
+                        <div class="communityPastAcheivementsBorder autoShow">
                             <div class="acheiventsBlockBorder">
                                 <div class="acheiventsBlocks">
                                     <div class="acheiventsIcon acheivementsElements">
@@ -1252,7 +1356,7 @@
                     </section>
                     <!-- sponsers page -->
                     <section id="showOffPage2">
-                        <div class="ourSponsers">
+                        <div class="ourSponsers autoShow">
                             <div id="sponserHeading">
                                 <h1 class="display-4 headingStyle" style="font-size: 34px">
                                     <span class="boldMe" style="font-size: 45px">O</span>ur
@@ -1333,75 +1437,218 @@
                 <section class="fluid-container hidden001" id="faqPage">
                     <div id="faqPageInline">
                         <div id="faqHeading">
-                            <h1 class="display-4 headingStyle" style="font-size: 34px">
+                            <h1 class="display-4 headingStyle autoShow" style="font-size: 34px">
                                 <span class="boldMe" style="font-size: 45px">FAQ</span>'s
                             </h1>
                             <div class="UnderLineForTxt my-2"></div>
                         </div>
 
                         <div class="accordion" id="accordionExample">
-                            <div class="accordion-item number1">
+                            <div class="accordion-item number1 posXAxisTransitionAnimation">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What is Our Community?
+                                        What services does Trimorphic Technologies offer?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong> Brainseed Network</strong>, a fastest growing community founded in
-                                        2022, where no. of skilled people work and help the society to keep aware &
-                                        develop the way of thinking & mentality towards as per the upcoming technology
-                                        trend by presenting you lots of webinar & events. Our thinking is to not to let
-                                        only ourselves grow but you too with us.
+                                    <div class="accordion-body alignPara">
+                                        <strong> Trimorphic Technologies</strong> offers a range of services including
+                                        web
+                                        development, app development, and AR/VR/MR solutions. We provide customized,
+                                        high-quality, and innovative solutions tailored to your business needs.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item number2">
+                            <div class="accordion-item number2 negXAxisTransitionAnimation">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Is Our Community a not-for-profit organisation?
+                                        How experienced is your team?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Brainseed Network is a not-for-profit organization that presents you options in
-                                        large number to grow and improve yourself in a perfect & well optimized manner.
+                                    <div class="accordion-body alignPara">
+                                        Our team consists of highly skilled professionals with extensive experience in
+                                        their
+                                        respective fields. We stay up-to-date with the latest technologies and industry
+                                        trends to deliver cutting-edge solutions.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item number3">
+                            <div class="accordion-item number3 posXAxisTransitionAnimation">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        How do I contact to the Community and how can I join your community??
+                                        How do I contact to the Company and how can I join your company?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        You can contact to us by writing us a mail to brainseednetworks931@gmail.com or
+                                    <div class="accordion-body alignPara">
+                                        You can contact to us by writing us a mail to trimorphictechnologies@gmail.com
+                                        or
                                         just fill-up contact us block and as for joining us you can fill up the form
                                         provided and we will contact u soon on the basis of the contact details filled.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item number4">
+                            <div class="accordion-item number4 negXAxisTransitionAnimation">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="true"
                                         aria-controls="collapseFour">
-                                        Is there a fee or charge for membership?
+                                        Can you customize your services to meet specific business requirements?
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        As per now we do not charge any fee for being a member of our community.
+                                    <div class="accordion-body alignPara">
+                                        Absolutely! We understand that each business has unique needs, and we offer
+                                        customized solutions designed to meet those specific requirements, whether it’s
+                                        for
+                                        a website, mobile app, or AR/VR/MR experience.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item number5posXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingfive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsefive" aria-expanded="false"
+                                        aria-controls="collapsefive">
+                                        How do I contact to the Company and how can I join your company?
+                                    </button>
+                                </h2>
+                                <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        You can contact to us by writing us a mail to trimorphictechnologies@gmail.com
+                                        or
+                                        just fill-up contact us block and as for joining us you can fill up the form
+                                        provided and we will contact u soon on the basis of the contact details filled.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number6 negXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        How do I contact to the Company and how can I join your company?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        You can contact to us by writing us a mail to trimorphictechnologies@gmail.com
+                                        or
+                                        just fill-up contact us block and as for joining us you can fill up the form
+                                        provided and we will contact u soon on the basis of the contact details filled.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number7posXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        How do you ensure the quality of your services?
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        Quality is a top priority at Trimorphic Technologies. We follow best practices
+                                        and
+                                        industry standards, conduct thorough testing, and ensure our solutions are
+                                        robust,
+                                        scalable, and secure.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number8 negXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        What are your pricing models?
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        We offer competitive pricing models that provide excellent value for money. Our
+                                        pricing
+                                        is flexible and can be tailored to fit your budget while ensuring high-quality
+                                        deliverables.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number9 posXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseNine" aria-expanded="false"
+                                        aria-controls="collapseNine">
+                                        How do you handle project deadlines?
+                                    </button>
+                                </h2>
+                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        We follow a well-structured project management process to ensure timely delivery
+                                        of
+                                        projects. We understand the importance of meeting deadlines and work diligently
+                                        to
+                                        deliver on time without compromising on quality.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number10 negXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingTen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        Do you provide support and maintenance after the project is completed?
+                                    </button>
+                                </h2>
+                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        Yes, we offer comprehensive support and maintenance services to ensure your
+                                        solutions
+                                        run smoothly and efficiently after the project is completed. We are here to
+                                        assist
+                                        you
+                                        with any issues or updates needed.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item number11 posXAxisTransitionAnimation">
+                                <h2 class="accordion-header" id="headingEleven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEleven" aria-expanded="false"
+                                        aria-controls="collapseEleven">
+                                        What makes Trimorphic Technologies different from other tech companies?
+                                    </button>
+                                </h2>
+                                <div id="collapseEleven" class="accordion-collapse collapse"
+                                    aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body alignPara">
+                                        Our commitment to innovation, quality, and customer satisfaction sets us apart.
+                                        We
+                                        thrive on creativity and are passionate about exploring new ideas and
+                                        technologies
+                                        to
+                                        provide you with unique and effective solutions.
                                     </div>
                                 </div>
                             </div>
@@ -1416,7 +1663,7 @@
                 <section class="fluid-container hidden001" id="contactUs">
                     <div id="contactSectionText">
                         <div id="contactUsHeading">
-                            <h1 class="display-4 headingStyle">
+                            <h1 class="display-4 headingStyle autoShow">
                                 <span class="boldMe" style="font-size: 45px">C</span>ontact
                                 <span class="boldMe" style="font-size: 45px">U</span>s
                             </h1>
@@ -1426,14 +1673,14 @@
                             <div class="contactUsFormDetail">
                                 <!-- Form Creation -->
                                 <form action="/" method="post">
-                                    <div class="mb-3">
+                                    <div class="mb-3 negXAxisTransitionAnimation">
                                         <label for="exampleInputName1" class="form-label">Your Name
                                             <span style="font-weight: 200; color: gray">(required)</span>
                                         </label>
                                         <input type="text" class="form-control" name="senderName0"
                                             id="exampleInputName1" required />
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 negXAxisTransitionAnimation">
                                         <label for="exampleInputEmail1" class="form-label">Email address
                                             <span style="font-weight: 200; color: gray">(required)</span>
                                         </label>
@@ -1443,18 +1690,18 @@
                                             We'll never share your email with anyone else.
                                         </div>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 negXAxisTransitionAnimation">
                                         <label for="exampleInputSubject1" class="form-label">Subject</label>
                                         <input type="text" class="form-control" name="senderSubject0"
                                             id="exampleInputSubject1" />
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 negXAxisTransitionAnimation">
                                         <label for="textareaId" class="form-label">Message
                                             <span style="font-weight: 200; color: gray">(required)</span>
                                         </label>
                                         <textarea name="senderMessage0" id="textareaId" required></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-primary" style="border: none">
+                                    <button type="submit" class="btn btn-primary negXAxisTransitionAnimation" style="border: none">
                                         Submit
                                     </button>
                                 </form>
@@ -1462,7 +1709,7 @@
                         </div>
                     </div>
                     <div id="contactSectionImage">
-                        <div class="displayContactUsImage">
+                        <div class="displayContactUsImage posXAxisTransitionAnimation">
                             <img src="./images/aboutImg3.png" alt="Contact Img" />
                         </div>
                     </div>
@@ -1473,13 +1720,13 @@
                 <!-- ! Footer page **starts -->
 
                 <section id="footerSection">
-                    <footer>
-                        <div id="footerImg"></div>
+                    <!-- <div id="footerImg"></div>
                         <div id="footerText">
-                            <!-- Left side -->
                             <div class="FooterLeftTop">
                                 <h1>BrainSeed Networks</h1>
-                                <p>Brainseed Networks, a fastest growing community founded in 2022, where people work to
+                                <p>TriMorphic Technologies, a fastest growing Tech firm founded in 2023, where people
+                                    work
+                                    to
                                     upskill themselves and help the society to keep aware & develop the way of thinking
                                     & mentality towards the upcoming technology trend by exploring and witnessing lots
                                     of webinars & events. Our thinking is to not to let only ourselves grow but also let
@@ -1488,8 +1735,8 @@
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#homePage">Home</a></li>
                                         <li class="breadcrumb-item"><a href="#About-Page">About</a></li>
-                                        <li class="breadcrumb-item"><a href="#teamMembersPage">Team</a></li>
-                                        <li class="breadcrumb-item"><a href="#eventPage">Events</a></li>
+                                        <li class="breadcrumb-item"><a href="#teamMembersPage">Services</a></li>
+                                        <li class="breadcrumb-item"><a href="#eventPage">Projects</a></li>
                                         <li class="breadcrumb-item"><a href="#testimonialPage">Testimonial</a></li>
                                         <li class="breadcrumb-item"><a href="#faqPage">Faq's</a></li>
                                         <li class="breadcrumb-item"><a href="#contactUs">Contact Us</a></li>
@@ -1499,10 +1746,8 @@
                             </div>
                             <div class="FooterLeftBottom" style="color: rgba(223, 223, 223, 0.445)"> &copy; Copyright
                                 Claimed</div>
-                            <!-- Right Side -->
                             <div class="FooterRightTop">
                                 <div class="FooterText">
-                                    <!-- Google Map Copied Code -->
                                     <iframe
                                         src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.2128965383204!2d75.69805381491967!3d27.212464882999367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cffc30dacc2db%3A0xb78e5c340c935a95!2sUniversity%20of%20Engineering%20%26%20Management%20(UEM)%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1668854834320!5m2!1sen!2sin
                                         width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
@@ -1513,11 +1758,148 @@
                                     <p>Address: UEMJ, rajasthan</p>
                                 </div>
                             </div>
-                            <div class="FooterRightBottom" style="color: rgba(223, 223, 223, 0.445)">2023-BrainSeed
-                                Networks
+                            <div class="FooterRightBottom" style="color: rgba(223, 223, 223, 0.445)">2024-TriMorphic
+                                Technologies
                             </div>
+                        </div> -->
+
+                    <!-- Footer -->
+                    <footer class="text-center text-lg-start bg-body-tertiary text-muted bg-dark">
+                        <!-- Section: Social media -->
+                        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom autoShow"
+                            style="color: #fff;">
+                            <!-- Left -->
+                            <div class="me-5 d-none d-lg-block titl">
+                                <span>Get connected with us on social networks:</span>
+                            </div>
+                            <!-- Left -->
+
+                            <!-- Right -->
+                            <div>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="" class="me-4 text-reset">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <!-- Right -->
+                        </section>
+                        <!-- Section: Social media -->
+
+                        <!-- Section: Links  -->
+                        <section class="">
+                            <div class="container text-center text-md-start mt-5">
+                                <!-- Grid row -->
+                                <div class="row mt-3">
+                                    <!-- Grid column -->
+                                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="color: #fff;">
+                                        <!-- Content -->
+                                        <h6 class="text-uppercase fw-bold mb-4">
+                                            <i class="fas fa-gem me-3"></i>TriMorphic Technologies
+                                        </h6>
+                                        <p class="alignPara">
+                                            TriMorphic Technologies, a fastest growing Tech firm founded in 2023, where
+                                            people work to
+                                            upskill themselves and help the society to keep aware & develop the way of
+                                            thinking
+                                            & mentality towards the upcoming technology trend by exploring and
+                                            witnessing lots
+                                            of webinars & events. Our thinking is to not to let only ourselves grow but
+                                            also let
+                                            you grow with us too.
+                                        </p>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="color: #fff;">
+                                        <!-- Links -->
+                                        <h6 class="text-uppercase fw-bold mb-4 titl">
+                                            Services
+                                        </h6>
+                                        <p>
+                                            <a href="#!" class="text-reset">Web-Development</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Application-Development</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Augmented reality</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Virtual Reality</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Mixed reality</a>
+                                        </p>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="color: #fff;">
+                                        <!-- Links -->
+                                        <h6 class="text-uppercase fw-bold mb-4 titl">
+                                            Useful links
+                                        </h6>
+                                        <p>
+                                            <a href="#!" class="text-reset">About</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Services</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Projects</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Contact Us</a>
+                                        </p>
+                                        <p>
+                                            <a href="#!" class="text-reset">Join Us</a>
+                                        </p>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="color: #fff;">
+                                        <!-- Links -->
+                                        <h6 class="text-uppercase fw-bold mb-4 titl">Contact</h6>
+                                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                                        <p>
+                                            <i class="fas fa-envelope me-3"></i>
+                                            info@example.com
+                                        </p>
+                                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                                    </div>
+                                    <!-- Grid column -->
+                                </div>
+                                <!-- Grid row -->
+                            </div>
+                        </section>
+                        <!-- Section: Links  -->
+
+                        <!-- Copyright -->
+                        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);"
+                            style="color: #fff;">
+                            © 2024 Copyright:
+                            <a class="text-reset fw-bold" href="/">TriMorphicTech.com</a>
                         </div>
+                        <!-- Copyright -->
                     </footer>
+                    <!-- Footer -->
                 </section>
             </div>
 

@@ -23,7 +23,7 @@ var typeOfMsg="";
 
 // Get requests
 app.get("/", function(req, res){
-    res.render('home', {
+    res.render('home0', {
         displayMessageHeading: displayMessageHeading,
         displayMessage : displayMessage,
         typeOfMsg: typeOfMsg,
@@ -55,7 +55,7 @@ app.post("/", function(req, res){
         
         var mailOptions = {
             from: 'node-123-123-112233-321@outlook.com',
-            to: 'brainseednetworks931@gmail.com',
+            to: 'itsmedevtheunknown@gmail.com',
             subject: subject,
             text: body,  
         };

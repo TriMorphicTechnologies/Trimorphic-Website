@@ -3,13 +3,13 @@
 
 /*Color setup*/
 :root {
-    --primary: rgb(0, 80, 0);
-    --primary-dark: rgb(0, 64, 0);
-    --primary-light: rgb(1, 126, 1);
+    --primary: rgb(255, 255, 255);
+    --primary-dark: rgb(255, 255, 255);
+    --primary-light: rgb(218, 218, 218);
     --black: #010101;
     --gray-1: #788190;
     --gray-2: #d3d4db;
-    --white: #ffffff;
+    --white: #f4f4f4;
     --body: #fefefe;
 }
 
@@ -27,12 +27,137 @@ body {
     background-color: var(--body);
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    cursor: none;
+    scroll-behavior: smooth;
+}
+
+.section{
+    scroll-snap-align: start;
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+}
+
+.cursor-outline {
+    width: 50px;
+    height: 50px;
+    border: 2px solid hsla(0, 2%, 9%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.whatsapp_float{
+    position: fixed;
+    z-index: 9;
+    bottom: 17px;
+    right: 85px;
+    transition: all 0.2s ease-in-out;
+}
+
+.whatsapp_float:hover{
+    bottom: 19px;
+    right: 87px;
+    transform: scale(1.2);
+}
+
+.navAni{
+    animation: navAni both;
+    animation-timeline: view();
+}
+
+@keyframes navAni {
+    from{
+        transform: translateY(200px) scale(0.7);
+        opacity: 0;
+    } to {
+        transform: translateY(0pc) scale(1);
+        opacity: 1;
+    }
+}
+
+.autoShow{
+    animation: autoshowanimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoshowanimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+    0%{
+        filter: blur(40px);
+    } 25%, 75% {
+        filter: blur(0px);
+    } 100% {
+        filter: blur(40px);
+    }
+}
+
+.posXAxisTransitionAnimation{
+    animation: posXAxisTransitionAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes posXAxisTransitionAnimation {
+    0%{
+        opacity: 0;
+        transform: translateX(300px) scale(0.3);
+    } 30%, 60% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    } 100% {
+        opacity: 0;
+        transform: translateX(300px) scale(0.3);
+    }
+}
+
+.negXAxisTransitionAnimation{
+    animation: negXAxisTransitionAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes negXAxisTransitionAnimation {
+    0%{
+        opacity: 0;
+        transform: translateX(-300px) scale(0.3);
+    } 30%, 60% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    } 100% {
+        opacity: 0;
+        transform: translateX(-300px) scale(0.3);
+    }
 }
 
 /* Common Parts */
 
-.btn:focus{
-    color: #128c7e;
+.btn:focus {
+    color: #000000;
 }
 
 .UnderLineForTxt {
@@ -45,7 +170,7 @@ body {
 .boldMe {
     font-weight: 400;
     font-size: 63px;
-    color: var(--primary-dark);
+    color: "black";
 }
 
 .container-fuild {
@@ -66,10 +191,12 @@ body {
 
 .btn-primary {
     background-color: var(--primary);
+    color: var(--black);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--black);
+    color: var(--primary-light);
 }
 
 .joinNavBtn {
@@ -95,15 +222,15 @@ body {
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--primary);
-    border: 1px solid var(--gray-2);
+    background-color: "black";
+    border: 1px solid "black";
     color: var(--white) !important;
 }
 
 .btn-outline-secondary:focus {
-    background-color: var(--primary);
-    border: 1px solid var(--gray-2);
-    color: var(--body);
+    background-color: "black";
+    border: 1px solid "black";
+    color: var(--white) !important;
 }
 
 /* Alert signals */
@@ -121,11 +248,15 @@ body>.alert {
 
 .navbar .btn-outline-secondary {
     border: 1px solid var(--gray-2);
-    color: var(--black);
+    color: "#fff";
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     padding: 10px 16px;
+}
+
+.navbar .btn-outline-secondary:hover{
+    background-color: #000000;
 }
 
 .navbar {
@@ -144,15 +275,15 @@ body>.alert {
 }
 
 /*Hero setion*/
-section.hero {
-    padding: 60px 0 80px 0;
-}
 
 section.hero .text {
     font-weight: 800;
     font-size: 48px;
     line-height: 73px;
     color: var(--primary);
+    font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 section.hero .hashtag {
@@ -160,14 +291,24 @@ section.hero .hashtag {
     font-size: 24px;
     line-height: 36px;
     color: var(--primary-light);
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 section.hero .home-text {
     padding-top: 35px;
     font-weight: 400;
     font-size: 15px;
-    line-height: 30px;
-    color: #788190;
+    line-height: 2.5;
+    letter-spacing: 3px;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alignPara{
+    text-align: justify !important;
 }
 
 .homeImg {
@@ -186,17 +327,50 @@ section.hero .home-text {
     line-height: 24px;
 }
 
+.homeAreaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.padding_btw {
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/* Add some content at the bottom of the video/page */
+.contentInVideo {
+    position: absolute;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 6rem 0;
+}
+
 /* About Section */
-#About-Page {
+.About-Page {
     /*** Change height here to decrease or increase size of about container. */
     /* border: 2px solid black; */
     /* height: 55vmax; */
     padding: 8rem 1rem;
     width: 100vw;
-    background-color: #FAFBFD;
+    background-color: #fafbfd;
+    margin-top: 17%;
+
 }
 
-#About-Page>.aboutEle {
+.About-Page>.aboutEle {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -205,7 +379,7 @@ section.hero .home-text {
     align-items: center;
 }
 
-#About-Page #aboutText {
+.About-Page .aboutText {
     /* border: 2px solid red; */
     height: 80%;
     width: 60%;
@@ -218,23 +392,38 @@ section.hero .home-text {
     font-weight: 300;
     font-size: 45px;
     line-height: 73px;
-    color: var(--primary);
+    color: "black";
+    font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-#About-Page #aboutImage {
+.About-Page .aboutImage {
     /* border: 2px solid blue; */
     height: 80%;
     width: 40%;
 }
 
-#About-Page>.aboutEle>#aboutImage>.imgContainer {
+.About-Page .lead{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.About-Page .descPara{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.About-Page>.aboutEle>#aboutImage>.imgContainer {
     height: 90%;
     width: 90%;
     /* border: 2px solid green; */
     margin: 5% auto;
 }
 
-#About-Page>.aboutEle>#aboutImage>.imgContainer>img {
+.About-Page>.aboutEle>#aboutImage>.imgContainer>img {
     height: 70%;
     width: 100%;
 }
@@ -243,6 +432,7 @@ section.hero .home-text {
 #joinUsOnPlatforms {
     /* height: 85vmax; */
     width: 100vw;
+    margin: 5rem 0;
     padding: 2rem 0.5rem;
     /* border: 2px solid red; */
     display: flex;
@@ -297,6 +487,8 @@ section.hero .home-text {
     align-items: center;
     width: 100%;
     height: 100%;
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
     /* border: 2px solid red; */
 }
 
@@ -327,12 +519,12 @@ section.hero .home-text {
 }
 
 #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms>.gridItemForJoinPlatform>.card:hover>.jp2 {
-    background-color: #5851DB;
+    background-color: #5851db;
     color: #fefefe;
 }
 
 #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms>.gridItemForJoinPlatform>.card:hover>.jp3 {
-    background-color: #E44058;
+    background-color: #e44058;
     color: #fefefe;
 }
 
@@ -379,7 +571,9 @@ section.hero .home-text {
     /* height: 60vmax; */
     padding: 2rem 0.5rem;
     width: 100%;
-    background-color: #FAFBFD;
+    background-color: #fafbfd;
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
 #benefitsOfJoiningUs .headingStyle {
@@ -395,28 +589,46 @@ section.hero .home-text {
     font-size: 28px;
     line-height: 2;
     color: black;
-
 }
 
 #benefitsOfJoiningUs .benifitcont {
-    margin-right: 37%;
-    padding: 2rem;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#benefitsOfJoiningUs .benbenifitImage {
+.eleOfJoin{
+    position: relative;
+}
+
+.left_right{
+    display: block;
+    padding: 2rem 10rem;
+    width: 75%;
+}
+
+.left_right:nth-child(even){
+    float: right;
+}
+
+.left_right:nth-child(odd){
+    float: left;
+}
+
+/* #benefitsOfJoiningUs .benbenifitImage {
     align-items: flex-start;
     display: flex;
-
-}
-
+} */
+/* 
 #benefitsOfJoiningUs>.container>#benifitImage>.imgContainer1>img {
     height: 36%;
     width: 36%;
     margin-top: -37%;
     margin-left: 65%;
-}
-
-
+} */
 
 /* Team Members page */
 #teamMembersPage {
@@ -431,6 +643,8 @@ section.hero .home-text {
     height: 100%;
     width: 82%;
     margin: auto;
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
 #teamMembersPage>#teamMembersArea>#founderTeam {
@@ -454,12 +668,11 @@ section.hero .home-text {
     overflow: hidden;
 }
 
-
-#teamMembersPage>#teamMembersArea>#founderTeam>.founderMembersCards>.card img{
+#teamMembersPage>#teamMembersArea>#founderTeam>.founderMembersCards>.card img {
     transition: all 0.5s ease-in-out;
 }
 
-#teamMembersPage>#teamMembersArea>#founderTeam>.founderMembersCards>.card img:hover{
+#teamMembersPage>#teamMembersArea>#founderTeam>.founderMembersCards>.card img:hover {
     transform: scale(1.15);
 }
 
@@ -545,12 +758,13 @@ section.hero .home-text {
     /* border: 2px solid black; */
     /* height: 70vmax; */
     width: 100vw;
-    background-color: #FAFBFD;
+    background-color: #fafbfd;
 }
 
 #eventPage>#eventArea {
     height: 100%;
     width: 100%;
+    padding: 3rem 0;
 }
 
 #eventPage>#eventArea>#eventHeading {
@@ -574,13 +788,13 @@ section.hero .home-text {
     padding: 5.5rem 1rem;
 }
 
-#eventPage>#eventArea #eventContentButton{
+#eventPage>#eventArea #eventContentButton {
     margin-top: 4rem;
 }
 
 #eventPage>#eventArea>#eventContent>#eventContentContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5% 5%;
     grid-auto-flow: row;
@@ -588,7 +802,7 @@ section.hero .home-text {
     align-content: center;
     justify-items: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
     height: 80%;
 }
 
@@ -649,6 +863,8 @@ section.hero .home-text {
 #eventPage .flip-card-front {
     background-color: #bbb;
     color: black;
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
 #eventPage .flip-card-front img {
@@ -658,8 +874,8 @@ section.hero .home-text {
 
 /* Style the back side */
 #eventPage .flip-card-back {
-    background-color: #f1f1f1;
-    color: var(--primary-dark);
+    background-color: #383838;
+    color: #fff;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -897,7 +1113,7 @@ section.hero .home-text {
 
 #blogPostsArea .carousel__thumbnails label:hover,
 #blogPostsArea .carousel__thumbnails label:focus {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 #blogPostsArea .carousel__thumbnails label:hover img,
@@ -917,7 +1133,7 @@ section.hero .home-text {
 #joinTeamPage {
     /* height: 60vmax; */
     width: 100vw;
-    background-color: #FAFBFD;
+    background-color: #fafbfd;
     /* border: 2px solid black; */
 }
 
@@ -971,12 +1187,21 @@ section.hero .home-text {
     padding: 4rem;
     width: 50%;
     height: 85%;
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
 #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>.card-title {
     padding-bottom: 2rem;
-    color: rgb(0 78 0);
+    color: "black";
     font-weight: bolder;
+    font-weight: 700;
+}
+
+#joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>.card-text{
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>a {
@@ -992,7 +1217,7 @@ section.hero .home-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EFEFEF;
+    background-color: #efefef;
 }
 
 .slide-container {
@@ -1009,7 +1234,7 @@ section.hero .home-text {
 
 .card {
     border-radius: 25px;
-    background-color: #FFF;
+    background-color: #fff;
 }
 
 .image-content,
@@ -1038,7 +1263,7 @@ section.hero .home-text {
 
 .overlay::before,
 .overlay::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: -40px;
@@ -1049,7 +1274,7 @@ section.hero .home-text {
 
 .overlay::after {
     border-radius: 0 25px 0 0;
-    background-color: #FFF;
+    background-color: #fff;
 }
 
 .card-image {
@@ -1057,7 +1282,7 @@ section.hero .home-text {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background: #FFF;
+    background: #fff;
     padding: 3px;
 }
 
@@ -1084,12 +1309,12 @@ section.hero .home-text {
 .button {
     border: none;
     font-size: 16px;
-    color: #FFF;
+    color: #fff;
     padding: 8px 16px;
     background-color: var(--primary-light);
     border-radius: 6px;
     margin: 14px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.3s ease;
 }
 
@@ -1098,7 +1323,7 @@ section.hero .home-text {
 }
 
 .swiper-navBtn {
-    color: #6E93f7;
+    color: #6e93f7;
     transition: color 0.3s ease;
 }
 
@@ -1127,6 +1352,7 @@ section.hero .home-text {
 .swiper-pagination-bullet-active {
     background-color: var(--primary-dark);
 }
+
 /* carousel ends*/
 
 /* Testimonilas Page */
@@ -1139,26 +1365,35 @@ section.hero .home-text {
     background-blend-mode: screen, color-dodge, overlay, difference, normal;
 }
 
-#testimonialPage #blogHeading{
+#testimonialPage #blogHeading {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 6rem;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-#testimonialPage .container .card .card-body{
+#testimonialPage .container .card .card-body {
     padding: 2rem 4rem;
 }
 
-#testimonialPage .container .card .card-body h4{
+#testimonialPage .container .card .card-body h4 {
     font-weight: 550;
     font-size: 1.5rem;
     color: #3c3c3c;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-#testimonialPage .container .card .card-body p{
+#testimonialPage .container .card .card-body p {
     font-weight: 300;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .carousel-indicators {
@@ -1166,6 +1401,7 @@ section.hero .home-text {
     width: 10px;
     height: 10px;
 }
+
 /* Testimonial ends */
 
 /* Show Off Page Section */
@@ -1343,8 +1579,8 @@ section.hero .home-text {
     /* height: 60vmax; */
     width: 100vw;
     /* border: 2px solid black; */
+    padding: 3rem 0;
 }
-
 
 #faqPage>#faqPageInline {
     height: 100%;
@@ -1376,11 +1612,14 @@ section.hero .home-text {
     padding: 1rem;
     width: 85%;
     margin: auto;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 #faqPage .accordion-link {
     font-size: 1.6rem;
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     background-color: #16baa9;
     width: 100%;
@@ -1392,7 +1631,7 @@ section.hero .home-text {
 
 #faqPage .accordion-link i {
     color: #e7d5ff;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 #faqPage .accordion-link .ion-md-remove {
@@ -1410,7 +1649,7 @@ section.hero .home-text {
 #faqPage .answer::before {
     content: "";
     position: absolute;
-    width: .6rem;
+    width: 0.6rem;
     height: 90%;
     background-color: #8fc460;
     top: 50%;
@@ -1419,9 +1658,12 @@ section.hero .home-text {
 }
 
 #faqPage .answer p {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1.4rem;
     padding: 2rem;
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #faqPage .accordion-item:target .answer {
@@ -1452,29 +1694,6 @@ section.hero .home-text {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#faqPage .faqContantBlock {
-    /* border: 2px solid blue; */
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 6% 2%;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-}
-
-#faqPage .gridEleForFaq {
-    display: inline-grid;
-    height: 100%;
-    width: 100%;
-    /* border: 2px solid red; */
-    box-shadow: 2px 4px 7px -2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 4px 7px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 4px 7px -2px rgba(0, 0, 0, 0.75);
 }
 
 #faqPage .accordion-button {
@@ -1543,6 +1762,11 @@ section.hero .home-text {
     align-items: center;
     flex-direction: column;
     /* border: 2px solid green; */
+}
+
+#contactUs .form-label{
+    font-family: "Libre Baskerville", serif;
+  font-style: normal;
 }
 
 #contactUs>#contactSectionImage {
@@ -1625,9 +1849,8 @@ section.hero .home-text {
 
 #footerSection {
     width: 100%;
-    height: 125vh;
     color: #fff;
-    background-color: #FAFBFD;
+    background-color: #fafbfd;
 }
 
 #footerSection footer {
@@ -1636,8 +1859,21 @@ section.hero .home-text {
     overflow: hidden;
 }
 
+footer .titl{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+footer p{
+    font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 
+
 #footerSection footer #footerImg {
-    /* border: 2px solid black; */
     width: 60%;
     height: 60%;
     position: relative;
@@ -1671,7 +1907,6 @@ section.hero .home-text {
     left: 8%;
     height: 55%;
     width: 37%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     line-height: 1.5em;
@@ -1685,7 +1920,6 @@ section.hero .home-text {
 
 .FooterLeftTop nav {
     position: relative;
-
 }
 
 .FooterLeftTop li a {
@@ -1695,18 +1929,15 @@ section.hero .home-text {
     letter-spacing: 1px;
 }
 
-
 .FooterLeftBottom {
     position: relative;
     top: 80%;
     left: 10em;
     height: 18%;
     width: 30%;
-    /* border: 2px solid blue; */
 }
 
 .FooterRightTop {
-    /* border: 2px solid pink; */
     height: 75%;
     width: 46%;
     position: absolute;
@@ -1724,7 +1955,6 @@ section.hero .home-text {
 }
 
 .FooterRightBottom {
-    /* border: 2px solid slateblue; */
     height: 18%;
     width: 30%;
     position: absolute;
@@ -1737,7 +1967,7 @@ section.hero .home-text {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Back To Top */
 #btn-back-to-top {
@@ -1749,17 +1979,39 @@ section.hero .home-text {
 
 /*Responsive section*/
 @media (max-width: 1024px) {
-    #eventPage>#eventArea>#eventContent>#eventContentContainer {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 90%;
-    }
 
     .homeImg {
         margin: 0;
     }
 
-    #About-Page .UnderLineForTxt {
+    .navbar .btn-outline-secondary{
+        padding: 10px 3px;
+        font-size: 11px;
+    }
+
+    #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    footer section:nth-child(2){
+        font-size: 0.7rem;
+    }
+
+    #homePage .container-X{
+        width: 85% !important;
+    }
+
+    .left_right {
+        padding: 2rem 6rem;
+        width: 90%;
+    }
+
+    #eventPage>#eventArea>#eventContent>#eventContentContainer{
+        width: 80%;
+    }
+
+    .About-Page .UnderLineForTxt {
         margin-top: 0rem !important;
         width: 8%;
     }
@@ -1777,7 +2029,7 @@ section.hero .home-text {
         font-size: 20px;
     }
 
-    .FooterLeftTop{
+    .FooterLeftTop {
         width: 45%;
     }
 
@@ -1786,7 +2038,7 @@ section.hero .home-text {
         line-height: 52px;
     }
 
-    #About-Page>.aboutEle>#aboutImage>.imgContainer>img {
+    .About-Page>.aboutEle>#aboutImage>.imgContainer>img {
         height: 30%;
         margin-top: 6rem;
     }
@@ -1795,12 +2047,11 @@ section.hero .home-text {
         padding: 5px;
     }
 
-
-    #About-Page #aboutText {
+    .About-Page #aboutText {
         width: 75%;
     }
 
-    #About-Page #aboutImage {
+    .About-Page #aboutImage {
         width: 25%;
     }
 
@@ -1818,6 +2069,25 @@ section.hero .home-text {
 }
 
 @media (max-width: 780px) {
+    .contentInVideo{
+        padding: 3rem 0;
+    }
+
+    section.hero .home-text{
+        font-size: 15px;
+        font-weight: 300;
+        /* padding: 0 2rem; */
+    }
+
+    .left_right{
+        width: 100%;
+        padding: 1rem 3rem;
+    }
+
+    #eventPage>#eventArea>#eventContent>#eventContentContainer{
+        width: 95%;
+    }
+
     section.hero .text {
         font-size: 45px;
     }
@@ -1853,7 +2123,6 @@ section.hero .home-text {
         margin: auto;
     }
 
-    
     .slide-content {
         margin: 0 45px;
     }
@@ -1904,24 +2173,20 @@ section.hero .home-text {
         width: 27rem;
     }
 
-    #About-Page #aboutImage {
+    .About-Page #aboutImage {
         width: 0;
     }
 
-    #About-Page #aboutText {
+    .About-Page #aboutText {
         width: 100%;
     }
 
-    #About-Page .headingStyle {
+    .About-Page .headingStyle {
         font-size: 22px;
     }
 
-    #About-Page img {
+    .About-Page img {
         height: 35% !important;
-    }
-
-    #About-Page .about-heading {
-        width: 25rem;
     }
 
     #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>.card-title {
@@ -1945,11 +2210,6 @@ section.hero .home-text {
 
     #joinUsOnPlatforms i {
         font-size: 3rem;
-    }
-
-    #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
     }
 
     #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail {
@@ -1993,13 +2253,62 @@ section.hero .home-text {
         font-size: 0.8rem;
     }
 
+    #faqPage .accordion-button{
+        font-size: 0.9rem;
+    }
+
     #faqPage #accordionExample {
         margin-top: 5%;
+        font-size: 0.8rem;
     }
 }
 
-
 @media (max-width: 576px) {
+
+    #faqPage #accordionExample {
+        font-size: 0.6rem;
+    }
+
+    #faqPage .accordion-button{
+        font-size: 0.7rem;
+    }
+
+    .contentInVideo{
+        padding: 1.5rem 0;
+    }
+
+    #homePage .container-X{
+        width: 92% !important;
+    }
+
+    section.hero .home-text{
+        font-size: 12px;
+        font-weight: 300;
+        /* padding: 0 2rem; */
+    }
+
+    .left_right{
+        width: 100%;
+        padding: 1rem 3rem;
+    }
+
+    #eventPage>#eventArea>#eventContent>#eventContentContainer{
+        width: 95%;
+    }
+
+    .About-Page .aboutText{
+        width: 98%;
+    }
+
+    .About-Page{
+        padding: 2rem 1rem;
+        margin-top: 100%;
+    }
+
+    #aboutText > .jumbotron > p{
+        display: none;
+    }
+
 
     section.hero,
     section.setup,
@@ -2015,9 +2324,11 @@ section.hero .home-text {
     .nav-link {
         margin-left: 0;
     }
-    .iconsHere i{
+
+    .iconsHere i {
         font-size: 1.7rem !important;
     }
+
     /*Hero setion*/
     section.hero img {
         padding-top: 2.5rem;
@@ -2039,47 +2350,88 @@ section.hero .home-text {
     }
 
     /* Footer setion*/
-    #footerSection footer #footerText{
+    #footerSection footer #footerText {
         margin-top: 80%;
     }
 }
 
 @media (max-width: 450px) {
+    .contentInVideo{
+        padding: 2.5rem 0;
+    }
+
+    .headingStyle{
+        font-size: 21px;
+    }
+
+    #homePage .container-X{
+        width: 92% !important;
+    }
+
+    section.hero .home-text{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .left_right{
+        width: 100%;
+        padding: 1rem 3rem;
+    }
+
+    #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.5% 3%;
+    }
+
+    #eventPage>#eventArea>#eventContent>#eventContentContainer{
+        width: 95%;
+    }
+
+    #benefitsOfJoiningUs .benifitcont{
+        padding: 0;
+    }
+
+    .About-Page{
+        padding: 2rem 1rem;
+        margin-top: 125%;
+    }
     .UnderLineForTxt {
         margin-top: -0.5rem !important;
         width: 6%;
     }
 
-    #About-Page .headingStyle {
+    .About-Page .headingStyle {
         width: 70%;
         line-height: 2.3rem;
         position: relative;
     }
 
-    #About-Page .headingStyle .rightShiftOnMobile {
+    .About-Page .headingStyle .rightShiftOnMobile {
         margin-left: 28%;
     }
 
-    #About-Page .UnderLineForTxt {
+    .About-Page .UnderLineForTxt {
         margin-left: -0.5rem !important;
         margin-top: -0.5rem !important;
     }
 
-    #About-Page .headingStyle .incrSizeOnMoblie {
+    .About-Page .headingStyle .incrSizeOnMoblie {
         font-size: 68px;
         position: relative;
         top: 20px;
     }
 
-    #About-Page .headingStyle .disapearMeOnMoblie {
+    .About-Page .headingStyle .disapearMeOnMoblie {
         font-size: 0px;
     }
 
-    #About-Page p {
-        margin: 0 10vw;
+    .About-Page p {
+        margin: 0 1vw;
     }
 
-    #About-Page #aboutImage {
+    .About-Page #aboutImage {
         height: 0;
         width: 0;
     }
@@ -2087,12 +2439,6 @@ section.hero .home-text {
     #joinUsOnPlatforms>#joinPlatforms>.joinPlatformHeading {
         margin-top: 0;
         margin-bottom: -3rem;
-    }
-
-    #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 2%;
     }
 
     #joinUsOnPlatforms>#joinPlatforms>#joinPlatformsDetail>.containerJoinPlatforms>.gridItemForJoinPlatform {
@@ -2151,7 +2497,6 @@ section.hero .home-text {
         letter-spacing: 3px;
         padding: 9rem 0 14rem;
     }
-    
 
     #teamMembersPage>#teamMembersArea>#founderTeam>.founderMembersCards {
         flex-direction: column;
@@ -2172,7 +2517,6 @@ section.hero .home-text {
         margin-top: -6rem;
     }
 
-
     #faqPage>#faqPageInline>#faqHeading .UnderLineForTxt {
         width: 4%;
     }
@@ -2183,21 +2527,21 @@ section.hero .home-text {
         letter-spacing: 3px;
     }
 
-    #eventPage>#eventArea>#eventContent>#eventContentContainer>.eventGrid-item{
+    #eventPage>#eventArea>#eventContent>#eventContentContainer>.eventGrid-item {
         height: 12rem;
     }
 
-    #eventPage>#eventArea>#eventContent{
+    #eventPage>#eventArea>#eventContent {
         margin-top: 6rem;
     }
 
-    #eventPage>#eventArea #eventContentButton{
+    #eventPage>#eventArea #eventContentButton {
         margin-top: 11rem;
     }
 
     #eventPage>#eventArea>#eventContent>#eventContentContainer {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         height: 100%;
         width: 70%;
     }
@@ -2236,7 +2580,7 @@ section.hero .home-text {
         flex-direction: column;
     }
 
-    #showoffPage>#showOffPage2{
+    #showoffPage>#showOffPage2 {
         margin-top: 15%;
     }
 
@@ -2263,12 +2607,13 @@ section.hero .home-text {
         font-weight: 800;
         letter-spacing: 3px;
     }
-    #footerSection footer #footerText p{
+
+    #footerSection footer #footerText p {
         font-size: 1rem;
         line-height: 1.75;
     }
 
-    .FooterLeftTop nav{
+    .FooterLeftTop nav {
         width: 100%;
         line-height: 2;
     }
@@ -2303,8 +2648,12 @@ section.hero .home-text {
         bottom: -15.15%;
     }
 
-    #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body p {
+    #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>a{
         font-size: 1.2rem;
+    }
+
+    #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body p {
+        font-size: 1rem;
     }
 
     #joinTeamPage>.container>#joinTeamCards>.borderJoinTeamCard>.card>.card-body>.card-title {
@@ -2327,6 +2676,19 @@ section.hero .home-text {
         margin-top: 98%;
     }
 
+    section.hero .home-text{
+        line-height: 1.2;
+        font-size: 10px;
+    }
+
+    .About-Page .headingStyle{
+        width: 78%;
+    }
+
+    .About-Page{
+        margin-top: 160%;
+    }
+
     #showoffPage>#showOffPage1>.communityPastAcheivementsBorder>.acheiventsBlockBorder>.acheiventsBlocks {
         height: 100%;
     }
@@ -2334,19 +2696,19 @@ section.hero .home-text {
     #footerSection footer #footerText {
         margin-top: 111%;
     }
-    .FooterRightTop{
+
+    .FooterRightTop {
         top: 73%;
     }
-    .FooterRightTop .FooterText iframe{
+
+    .FooterRightTop .FooterText iframe {
         height: 70%;
     }
-    
-    #teamMembersPage>#teamMembersArea>#coreTeam>.CoreMembersCards>#coreMembersCarosoul{
+
+    #teamMembersPage>#teamMembersArea>#coreTeam>.CoreMembersCards>#coreMembersCarosoul {
         width: 100%;
     }
 }
-
-
 
 .iconsHere {
     /* border: 2px solid red; */
@@ -2364,88 +2726,83 @@ section.hero .home-text {
 .iconsHere i {
     font-size: 2.3rem;
     color: #fff;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-
-/* Left to Right Animations */
-
-.hidden001{
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
-    transform: translateX(-100%);
-}
-
-.show001{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-@media(prefers-reduced-motion){
-    .hidden001{
+@media (prefers-reduced-motion) {
+    .hidden001 {
         transition: none;
     }
 }
 
-#homePage .homeImg{
+#homePage .homeImg {
     transition-delay: 200ms;
 }
 
-#About-Page #aboutText{
+.About-Page #aboutText {
     transition-delay: 200ms;
 }
 
-.headingStyle{
+.headingStyle {
     transition-delay: 300ms;
 }
 
-.founderMembersCards .number2{
+.founderMembersCards .number2 {
     transition-delay: 200ms;
 }
-.founderMembersCards .number3{
+
+.founderMembersCards .number3 {
     transition-delay: 400ms;
 }
 
-#joinUsOnPlatforms .jp2{
+#joinUsOnPlatforms .jp2 {
     transition-delay: 200ms;
 }
-#joinUsOnPlatforms .jp3{
+
+#joinUsOnPlatforms .jp3 {
     transition-delay: 400ms;
 }
-#joinUsOnPlatforms .jp4{
+
+#joinUsOnPlatforms .jp4 {
     transition-delay: 600ms;
 }
-#joinUsOnPlatforms .jp5{
+
+#joinUsOnPlatforms .jp5 {
     transition-delay: 800ms;
 }
-#joinUsOnPlatforms .jp6{
+
+#joinUsOnPlatforms .jp6 {
     transition-delay: 1000ms;
 }
 
-#eventPage .number2{
+#eventPage .number2 {
     transition-delay: 200ms;
 }
-#eventPage .number3{
+
+#eventPage .number3 {
     transition-delay: 400ms;
 }
-#eventPage .number4{
+
+#eventPage .number4 {
     transition-delay: 600ms;
 }
-#eventPage .number5{
+
+#eventPage .number5 {
     transition-delay: 800ms;
 }
-#eventPage .number6{
+
+#eventPage .number6 {
     transition-delay: 1000ms;
 }
 
-#faqPage .number2{
+#faqPage .number2 {
     transition-delay: 200ms;
 }
-#faqPage .number3{
+
+#faqPage .number3 {
     transition-delay: 400ms;
 }
-#faqPage .number4{
+
+#faqPage .number4 {
     transition-delay: 600ms;
 }
