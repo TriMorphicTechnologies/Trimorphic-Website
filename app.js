@@ -55,7 +55,7 @@ app.post("/", function(req, res){
         
         var mailOptions = {
             from: 'node-123-123-112233-321@outlook.com',
-            to: 'itsmedevtheunknown@gmail.com',
+            to: 'trimorphictechnologies@gmail.com',
             subject: subject,
             text: body,  
         };
